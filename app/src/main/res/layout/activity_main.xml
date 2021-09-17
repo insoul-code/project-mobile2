@@ -185,7 +185,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btregistro"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Registrarme"
