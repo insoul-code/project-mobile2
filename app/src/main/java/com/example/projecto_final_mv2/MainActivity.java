@@ -3,13 +3,14 @@ package com.example.projecto_final_mv2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-<<<<<<< HEAD
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import java.util.regex.Pattern;
 
@@ -23,13 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     "\\." +
                     "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
                     ")+");
-=======
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.Spinner;
->>>>>>> 272c3e6268191476d67d9b689fc2e6f7d5699fe8
+
 
     EditText jetnombre, jetcorreo, jetpais, jetciudad, jetcontra;
     Button jbtregistro;
@@ -44,9 +39,6 @@ import android.widget.Spinner;
         jetpais=findViewById(R.id.etpais);
         jetciudad=findViewById(R.id.etciudad);
         jetcontra=findViewById(R.id.etcontra);
-<<<<<<< HEAD
-        jradioVendedor=findViewById(R.id.radioVendedor);
-        jradioUsuario=findViewById(R.id.radioUsuario);
         jbtregistro=findViewById(R.id.btregistro);
         jbtregistro.setOnClickListener(this);
     }
@@ -106,7 +98,6 @@ import android.widget.Spinner;
         validateContra();
         validateCorreo();
         validateCampos();
-=======
         jbtregistro=findViewById(R.id.btregistro);
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
@@ -117,6 +108,5 @@ import android.widget.Spinner;
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
                 spinner.setAdapter(adapter);
->>>>>>> 272c3e6268191476d67d9b689fc2e6f7d5699fe8
     }
 }
