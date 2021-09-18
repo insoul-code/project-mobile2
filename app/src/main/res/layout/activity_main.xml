@@ -180,12 +180,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Registrarme"
-<<<<<<< HEAD
             android:onClick="onClick"
             android:textSize="20dp"/>
-=======
-            android:textSize="20dp" />
->>>>>>> 272c3e6268191476d67d9b689fc2e6f7d5699fe8
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
