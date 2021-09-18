@@ -3,6 +3,7 @@ package com.example.projecto_final_mv2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     "\\." +
                     "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
                     ")+");
+=======
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.Spinner;
+>>>>>>> 272c3e6268191476d67d9b689fc2e6f7d5699fe8
 
     EditText jetnombre, jetcorreo, jetpais, jetciudad, jetcontra;
     Button jbtregistro;
@@ -36,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         jetpais=findViewById(R.id.etpais);
         jetciudad=findViewById(R.id.etciudad);
         jetcontra=findViewById(R.id.etcontra);
+<<<<<<< HEAD
         jradioVendedor=findViewById(R.id.radioVendedor);
         jradioUsuario=findViewById(R.id.radioUsuario);
         jbtregistro=findViewById(R.id.btregistro);
@@ -97,5 +106,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         validateContra();
         validateCorreo();
         validateCampos();
+=======
+        jbtregistro=findViewById(R.id.btregistro);
+
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.planets_array, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+                spinner.setAdapter(adapter);
+>>>>>>> 272c3e6268191476d67d9b689fc2e6f7d5699fe8
     }
 }
