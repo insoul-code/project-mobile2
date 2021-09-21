@@ -1,4 +1,4 @@
-package com.example.projecto_final_mv2;
+package app.proyecto.tiendeo;
 
 import org.junit.Test;
 

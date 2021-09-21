@@ -9,7 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Projectofinalmv2">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name="app.proyecto.tiendeo.Login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="tiendeo.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
