@@ -1,4 +1,4 @@
-package com.example.projecto_final_mv2;
+package app.proyecto.tiendeo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,8 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import com.example.projecto_final_mv2.R;
 
 import java.util.regex.Pattern;
 
