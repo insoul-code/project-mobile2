@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.projecto_final_mv2" >
+    package="app.proyecto.tiendeo" >
 
     <application
         android:allowBackup="true"
@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Projectofinalmv2" >
         <activity
-            android:name="app.proyecto.tiendeo.LoginActivity"
-            android:exported="true" />
-        <activity
             android:name="app.proyecto.tiendeo.Login"
             android:exported="true" >
             <intent-filter>
@@ -21,7 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="tiendeo.MainActivity" >
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

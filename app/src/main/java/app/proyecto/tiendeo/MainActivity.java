@@ -2,6 +2,7 @@ package app.proyecto.tiendeo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -12,7 +13,7 @@ import android.widget.Toast;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.example.projecto_final_mv2.R;
+import app.proyecto.tiendeo.R;
 
 import java.util.regex.Pattern;
 
@@ -110,5 +111,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
                 spinner.setAdapter(adapter);
+    }
+
+    public void Login (View view){
+        Intent login = new Intent(this, Login.class);
+        startActivity(login);
     }
 }

@@ -227,6 +227,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="#CDCFEB"
+            android:onClick="Login"
             android:text="Ya tengo una cuenta, ir al login"
             android:textColor="#2B34B1"
             android:textSize="14dp" />

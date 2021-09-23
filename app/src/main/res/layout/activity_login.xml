@@ -9,11 +9,60 @@
     tools:context="app.proyecto.tiendeo.Login">
 
     <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginBottom="35dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/etcorreoelectro"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#fff"
+            android:ems="10"
+            android:hint="Correo electrónico"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="10dp"
+            android:textColorHint="#4B4B4B" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="93dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/etcontrasena"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:inputType="numberPassword"
+            android:paddingHorizontal="10dp"
+            android:textColorHint="#4B4B4B" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="409dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="163dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="498dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginBottom="166dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,18 +71,15 @@
 
         <Button
             android:id="@+id/btnPasar"
-            android:layout_width="wrap_content"
+            android:layout_width="388dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="Siguiente"
-            android:text="Button" />
+            android:backgroundTint="#525BDA"
+            android:onClick="createUser"
+            android:text="Ingresar"
+            android:textSize="14dp" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="310dp"
-        android:layout_height="48dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="323dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
