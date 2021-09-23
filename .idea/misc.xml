@@ -3,14 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/MOVILES-2/project-mobile2/app/src/main/res/layout/activity_login.xml" value="0.2536231884057971" />
-        <entry key="..\:/MOVILES-2/project-mobile2/app/src/main/res/layout/activity_main.xml" value="0.2536231884057971" />
-        <entry key="..\:/moviles 2/project/project-mobile2/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/MOVILES-2/project-mobile2/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/MOVILES-2/project-mobile2/app/src/main/res/layout/activity_login2.xml" value="0.1" />
+        <entry key="..\:/MOVILES-2/project-mobile2/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/moviles 2/project/project-mobile2/app/src/main/res/layout/activity_main.xml" value="0.33" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
