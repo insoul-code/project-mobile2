@@ -9,6 +9,7 @@
     tools:context="app.proyecto.tiendeo.Login">
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="409dp"
         android:layout_height="70dp"
         android:layout_marginTop="163dp"
@@ -25,15 +26,10 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="Siguiente"
-            android:text="Button" />
+            android:onClick="onClick"
+            android:text="Button"
+            android:visibility="visible"
+            tools:visibility="visible" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="310dp"
-        android:layout_height="48dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="323dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

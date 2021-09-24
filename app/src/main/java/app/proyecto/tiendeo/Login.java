@@ -18,11 +18,10 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         jbtnPasar=findViewById(R.id.btnPasar);
+
     }
-
-
-    public void Siguiente (View view){
-        Intent nombre = new Intent(this, MainActivity.class);
-        startActivity(nombre);
+    public void Pasar(View view){
+        Intent pasar = new Intent(Login.this, MainActivity.class);
+        startActivity(pasar);
     }
 }

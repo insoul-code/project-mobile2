@@ -2,6 +2,7 @@ package app.proyecto.tiendeo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -16,7 +17,7 @@ import com.example.projecto_final_mv2.R;
 
 import java.util.regex.Pattern;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         jetciudad=findViewById(R.id.etciudad);
         jetcontra=findViewById(R.id.etcontra);
         jbtregistro=findViewById(R.id.btregistro);
-        jbtregistro.setOnClickListener(this);
+//        jbtregistro.setOnClickListener(this);
     }
     private boolean validateCorreo(){
         String emailInput = jetcorreo.getText().toString().trim();
@@ -95,20 +96,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return true;
         }
     }
-    @Override
-    public void onClick(View v) {
+    public void Pasar(View view){
+        Intent pasar = new Intent(MainActivity.this, Login.class);
+        startActivity(pasar);
         validateContra();
         validateCorreo();
         validateCampos();
-        jbtregistro=findViewById(R.id.btregistro);
-
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
-        // Create an ArrayAdapter using the string array and a default spinner layout
-                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                        R.array.planets_array, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
-                spinner.setAdapter(adapter);
     }
 }
+//    @Override
+//    public void onClick(View v) {
+//        validateContra();
+//        validateCorreo();
+//        validateCampos();
+//    }
+//        jbtregistro=findViewById(R.id.btregistro);
+
+//        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+//        // Create an ArrayAdapter using the string array and a default spinner layout
+//                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+//                        R.array.planets_array, android.R.layout.simple_spinner_item);
+//        // Specify the layout to use when the list of choices appears
+//                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        // Apply the adapter to the spinner
+//                spinner.setAdapter(adapter);
+//    }
