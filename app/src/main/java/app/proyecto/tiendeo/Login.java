@@ -48,11 +48,10 @@ public class Login extends AppCompatActivity {
                     }
                 });
     }
-
-   /* public void Siguiente (View view){
+    public void Siguiente (View view){
         Intent nombre = new Intent(this, MainActivity.class);
         startActivity(nombre);
-    }*/
+    }
 
 
 
