@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EEF1FA"
+    android:background="#F5F6FA"
     android:paddingHorizontal="32dp"
     tools:context="app.proyecto.tiendeo.MainActivity">
 
@@ -49,6 +49,7 @@
             android:background="#fff"
             android:paddingHorizontal="10dp"
             android:hint="Nombre completo"
+            android:textColorHint="#4B4B4B"
             android:inputType="textPersonName" />
     </LinearLayout>
 
@@ -71,6 +72,7 @@
             android:background="#fff"
             android:paddingHorizontal="10dp"
             android:hint="Correo electrónico"
+            android:textColorHint="#4B4B4B"
             android:inputType="textEmailAddress" />
     </LinearLayout>
 
@@ -90,11 +92,12 @@
             android:id="@+id/etpais"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#fff"
             android:ems="10"
             android:hint="País"
-            android:paddingHorizontal="10dp"
-            android:background="#fff"
-            android:inputType="textPersonName" />
+            android:textColorHint="#4B4B4B"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="10dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -114,6 +117,7 @@
             android:layout_height="match_parent"
             android:ems="10"
             android:hint="Ciudad"
+            android:textColorHint="#4B4B4B"
             android:paddingHorizontal="10dp"
             android:background="#fff"
             android:inputType="textPersonName" />
@@ -136,6 +140,7 @@
             android:layout_height="match_parent"
             android:ems="10"
             android:hint="Contraseña"
+            android:textColorHint="#4B4B4B"
             android:paddingHorizontal="10dp"
             android:background="#fff"
             android:inputType="textPassword" />
@@ -155,9 +160,10 @@
             android:id="@+id/spinner"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingHorizontal="10dp"
+            android:autofillHints="name"
             android:background="#fff"
-            android:autofillHints="name" />
+            android:paddingHorizontal="10dp"
+            tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
     <LinearLayout
@@ -179,6 +185,7 @@
             android:background="#fff"
             android:ems="10"
             android:hint="Nombre de la tienda"
+            android:textColorHint="#4B4B4B"
             android:inputType="textPersonName"
             android:paddingHorizontal="10dp" />
     </LinearLayout>
@@ -187,7 +194,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginBottom="78dp"
+        android:layout_marginBottom="70dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -198,11 +205,32 @@
             android:id="@+id/btregistro"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Registrarme"
-            android:onClick="onClick"
             android:backgroundTint="#525BDA"
-            android:textSize="20dp"/>
+            android:onClick="onClick"
+            android:text="Registrarme"
+            android:textSize="14dp" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/btlogin"
+            android:layout_width="380dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#CDCFEB"
+            android:onClick="Login"
+            android:text="Ya tengo una cuenta, ir al login"
+            android:textColor="#2B34B1"
+            android:textSize="14dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
