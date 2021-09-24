@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EEF1FA"
+    android:background="#F5F6FA"
     android:paddingHorizontal="32dp"
     tools:context="app.proyecto.tiendeo.MainActivity">
 
