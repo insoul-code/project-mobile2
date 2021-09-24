@@ -9,8 +9,6 @@
     tools:context="app.proyecto.tiendeo.Login">
 
     <LinearLayout
-<<<<<<< HEAD
-=======
         android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -60,7 +58,7 @@
     </LinearLayout>
 
     <LinearLayout
->>>>>>> develop
+
         android:id="@+id/linearLayout2"
         android:layout_width="409dp"
         android:layout_height="60dp"
@@ -77,21 +75,10 @@
             android:layout_width="388dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-<<<<<<< HEAD
-            android:onClick="onClick"
+            android:onClick="Siguiente"
             android:text="Button"
             android:visibility="visible"
             tools:visibility="visible" />
     </LinearLayout>
 
-=======
-            android:backgroundTint="#525BDA"
-            android:onClick="Siguiente"
-            android:text="Ingresar"
-            android:textSize="14dp" />
-    </LinearLayout>
-
-
-
->>>>>>> develop
 </androidx.constraintlayout.widget.ConstraintLayout>

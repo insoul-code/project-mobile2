@@ -25,10 +25,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private static final Pattern PASSWORD_PATTERN =
-            Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$");
+            Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=*])(?=\\S+$).{8,}$");
 
 
     EditText jetnombre, jetcorreo, jetpais, jetciudad, jetcontra;
@@ -98,15 +98,15 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
     }
-<<<<<<< HEAD
-    public void Pasar(View view){
+
+    public void Pasar(View view) {
         Intent pasar = new Intent(MainActivity.this, Login.class);
         startActivity(pasar);
         validateContra();
         validateCorreo();
         validateCampos();
-=======
 
+    }
 
     public void createUser(){
         Map<String, Object> register = new HashMap<>();
@@ -153,23 +153,8 @@ public class MainActivity extends AppCompatActivity {
     public void Login (View view){
         Intent login = new Intent(this, Login.class);
         startActivity(login);
->>>>>>> develop
+
     }
 }
-//    @Override
-//    public void onClick(View v) {
-//        validateContra();
-//        validateCorreo();
-//        validateCampos();
-//    }
-//        jbtregistro=findViewById(R.id.btregistro);
 
-//        Spinner spinner = (Spinner) findViewById(R.id.spinner);
-//        // Create an ArrayAdapter using the string array and a default spinner layout
-//                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-//                        R.array.planets_array, android.R.layout.simple_spinner_item);
-//        // Specify the layout to use when the list of choices appears
-//                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        // Apply the adapter to the spinner
-//                spinner.setAdapter(adapter);
-//    }
+

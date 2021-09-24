@@ -1,24 +1,21 @@
 package app.proyecto.tiendeo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-
 import java.util.HashMap;
 import java.util.Map;
-
-import app.proyecto.tiendeo.R;
 
 public class Login extends AppCompatActivity {
     Button jbtnPasar;
@@ -29,13 +26,13 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         jbtnPasar=findViewById(R.id.btnPasar);
-<<<<<<< HEAD
+
 
     }
     public void Pasar(View view){
         Intent pasar = new Intent(Login.this, MainActivity.class);
         startActivity(pasar);
-=======
+
     }
 
     public void createUser(View view){
@@ -58,7 +55,7 @@ public class Login extends AppCompatActivity {
     public void Siguiente (View view){
         Intent nombre = new Intent(this, MainActivity.class);
         startActivity(nombre);
->>>>>>> develop
+
     }
 
 
