@@ -25,10 +25,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private static final Pattern PASSWORD_PATTERN =
-            Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$");
+            Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=*])(?=\\S+$).{8,}$");
 
 
     EditText jetnombre, jetcorreo, jetpais, jetciudad, jetcontra;
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         jetciudad=findViewById(R.id.etciudad);
         jetcontra=findViewById(R.id.etcontra);
         jbtregistro=findViewById(R.id.btregistro);
-        jbtregistro.setOnClickListener(this);
+//        jbtregistro.setOnClickListener(this);
     }
     private boolean validateCorreo(){
         String emailInput = jetcorreo.getText().toString().trim();
@@ -99,6 +99,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    public void Pasar(View view) {
+        Intent pasar = new Intent(MainActivity.this, Login.class);
+        startActivity(pasar);
+        validateContra();
+        validateCorreo();
+        validateCampos();
+
+    }
 
     public void createUser(){
         Map<String, Object> register = new HashMap<>();
@@ -145,5 +153,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void Login (View view){
         Intent login = new Intent(this, Login.class);
         startActivity(login);
+
     }
 }
+
+
