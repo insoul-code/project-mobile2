@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="220dp"
-        android:layout_marginBottom="35dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +36,6 @@
         android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginBottom="93dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +50,7 @@
             android:background="#fff"
             android:ems="10"
             android:hint="Contraseña"
-            android:inputType="numberPassword"
+            android:inputType="textPassword"
             android:paddingHorizontal="10dp"
             android:textColorHint="#4B4B4B" />
     </LinearLayout>
@@ -72,13 +70,38 @@
 
         <Button
             android:id="@+id/btnPasar"
-            android:layout_width="388dp"
+            android:layout_width="393dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="Siguiente"
-            android:text="Button"
+            android:backgroundTint="#525BDA"
+            android:text="Iniciar sesión"
             android:visibility="visible"
-            tools:visibility="visible" />
+            tools:visibility="visible"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="144dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#CDCFEB"
+            android:onClick="Registrarme"
+            android:text="No tengo cuenta, Registrarme"
+            android:textColor="#2B34B1"
+            android:textSize="14dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
