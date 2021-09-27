@@ -29,11 +29,6 @@ public class Login extends AppCompatActivity {
 
 
     }
-    public void Pasar(View view){
-        Intent pasar = new Intent(Login.this, MainActivity.class);
-        startActivity(pasar);
-
-    }
 
     public void createUser(View view){
         Map<String, Object> userData = new HashMap<>();
@@ -52,7 +47,7 @@ public class Login extends AppCompatActivity {
                     }
                 });
     }
-    public void Siguiente (View view){
+    public void Registrarme (View view){
         Intent nombre = new Intent(this, MainActivity.class);
         startActivity(nombre);
 
