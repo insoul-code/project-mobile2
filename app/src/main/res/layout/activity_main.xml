@@ -163,6 +163,7 @@
             android:autofillHints="name"
             android:background="#fff"
             android:paddingHorizontal="10dp"
+            android:spinnerMode="dialog"
             tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
