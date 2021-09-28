@@ -9,229 +9,154 @@
     tools:context="app.proyecto.tiendeo.MainActivity">
 
 
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="0dp"
+    <EditText
+        android:id="@+id/etnombre"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="10dp"
+        android:background="#fff"
+        android:ems="10"
+        android:hint="Nombre completo"
+        android:inputType="textPersonName"
+        android:paddingHorizontal="10dp"
+        android:textColorHint="#4B4B4B"
+        app:layout_constraintBottom_toTopOf="@+id/etcorreo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etcontra"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="10dp"
+        android:background="#fff"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:paddingHorizontal="10dp"
+        android:textColorHint="#4B4B4B"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etciudad"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="10dp"
+        android:background="#fff"
+        android:ems="10"
+        android:hint="Ciudad"
+        android:inputType="textPersonName"
+        android:paddingHorizontal="10dp"
+        android:textColorHint="#4B4B4B"
+        app:layout_constraintBottom_toTopOf="@+id/etcontra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etpais"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="10dp"
+        android:background="#fff"
+        android:ems="10"
+        android:hint="País"
+        android:inputType="textPersonName"
+        android:paddingHorizontal="10dp"
+        android:textColorHint="#4B4B4B"
+        app:layout_constraintBottom_toTopOf="@+id/etciudad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etcorreo"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="10dp"
+        android:background="#fff"
+        android:ems="10"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress"
+        android:paddingHorizontal="10dp"
+        android:textColorHint="#4B4B4B"
+        app:layout_constraintBottom_toTopOf="@+id/etpais"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="10dp"
+        android:autofillHints="name"
+        android:background="#fff"
+        android:paddingHorizontal="10dp"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btregistro"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#525BDA"
+        android:onClick="onClick"
+        android:text="Registrarme"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/btlogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName7"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="30dp"
+        android:background="#fff"
+        android:ems="10"
+        android:hint="Nombre de la tienda"
+        android:inputType="textPersonName"
+        android:paddingHorizontal="10dp"
+        android:textColorHint="#4B4B4B"
+        app:layout_constraintBottom_toTopOf="@+id/btregistro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="320dp"
         android:layout_height="50dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        android:layout_marginTop="10dp"
+        android:text="Registro"
+        android:textColor="#2B2B2B"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/etnombre"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.46" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="#2B2B2B"
-            android:text="Registro"
-            android:textSize="30dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
-
-        <EditText
-            android:id="@+id/etnombre"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:ems="10"
-            android:background="#fff"
-            android:paddingHorizontal="10dp"
-            android:hint="Nombre completo"
-            android:textColorHint="#4B4B4B"
-            android:inputType="textPersonName" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout5"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="511dp"
-        android:orientation="vertical"
+    <Button
+        android:id="@+id/btlogin"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="1"
+        android:backgroundTint="#CDCFEB"
+        android:onClick="Login"
+        android:text="Ya tengo una cuenta, ir al login"
+        android:textColor="#2B34B1"
+        android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
-
-        <EditText
-            android:id="@+id/etcorreo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:ems="10"
-            android:background="#fff"
-            android:paddingHorizontal="10dp"
-            android:hint="Correo electrónico"
-            android:textColorHint="#4B4B4B"
-            android:inputType="textEmailAddress" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout6"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
-
-        <EditText
-            android:id="@+id/etpais"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#fff"
-            android:ems="10"
-            android:hint="País"
-            android:textColorHint="#4B4B4B"
-            android:inputType="textPersonName"
-            android:paddingHorizontal="10dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout7"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
-
-        <EditText
-            android:id="@+id/etciudad"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:ems="10"
-            android:hint="Ciudad"
-            android:textColorHint="#4B4B4B"
-            android:paddingHorizontal="10dp"
-            android:background="#fff"
-            android:inputType="textPersonName" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout8"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
-
-        <EditText
-            android:id="@+id/etcontra"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:ems="10"
-            android:hint="Contraseña"
-            android:textColorHint="#4B4B4B"
-            android:paddingHorizontal="10dp"
-            android:background="#fff"
-            android:inputType="textPassword" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout9"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
-
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:autofillHints="name"
-            android:background="#fff"
-            android:paddingHorizontal="10dp"
-            android:spinnerMode="dialog"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout10"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
-
-        <EditText
-            android:id="@+id/editTextTextPersonName7"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#fff"
-            android:ems="10"
-            android:hint="Nombre de la tienda"
-            android:textColorHint="#4B4B4B"
-            android:inputType="textPersonName"
-            android:paddingHorizontal="10dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="70dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
-
-        <Button
-            android:id="@+id/btregistro"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:backgroundTint="#525BDA"
-            android:onClick="onClick"
-            android:text="Registrarme"
-            android:textSize="14dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <Button
-            android:id="@+id/btlogin"
-            android:layout_width="380dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="#CDCFEB"
-            android:onClick="Login"
-            android:text="Ya tengo una cuenta, ir al login"
-            android:textColor="#2B34B1"
-            android:textSize="14dp" />
-    </LinearLayout>
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
