@@ -2,7 +2,6 @@
 <resources>
     <string-array name="options_array">
         <item>Selecciona una opción</item>
-        <item>Administrador</item>
         <item>Vendedor</item>
         <item>Usuario</item>
     </string-array>

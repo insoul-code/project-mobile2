@@ -115,13 +115,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void createUser(){
         Map<String, Object> register = new HashMap<>();
-        register.put("nombre","Jose");
-        register.put("email","jose@gmail.com");
-        register.put("pais","Polonia");
-        register.put("ciudad","Gdansk");
-        register.put("pass","12345@");
-        register.put("rol","admin");
-        register.put("nombre_tienda","Tres Trigos");
+        register.put("nombre",jetnombre.getText().toString());
+        register.put("email",jetcorreo.getText().toString());
+        register.put("pais",jetpais.getText().toString());
+        register.put("ciudad",jetciudad.getText().toString());
+        register.put("pass",jetcontra.getText().toString());
+        register.put("rol","");
+        register.put("nombre_tienda","");
         db.collection("usuarios")
                 .add(register)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
