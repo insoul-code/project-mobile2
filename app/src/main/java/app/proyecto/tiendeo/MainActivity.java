@@ -3,13 +3,18 @@ package app.proyecto.tiendeo;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -21,7 +26,10 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import app.proyecto.tiendeo.R;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
@@ -33,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     EditText jetnombre, jetcorreo, jetpais, jetciudad, jetcontra;
     Button jbtregistro;
+    Spinner spinner;
     RadioButton jradioVendedor, jradioUsuario;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     @Override
@@ -46,66 +55,62 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         jetcontra=findViewById(R.id.etcontra);
         jbtregistro=findViewById(R.id.btregistro);
 //        jbtregistro.setOnClickListener(this);
-    }
-    private boolean validateCorreo(){
-        String emailInput = jetcorreo.getText().toString().trim();
 
-        if (emailInput.isEmpty()){
-            jetcorreo.setError("El campo se debe estar lleno");
-            return false;
-        }
-        else if (!Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()){
-            jetcorreo.setError("Por favor ingrese un correo valido ");
-            return false;
-        }
-        else {
-            jetcorreo.setError(null);
-            return true;
-        }
+        spinner=(Spinner)findViewById(R.id.spinner);
+
+        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,R.array.options_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
     }
-    private boolean validateContra(){
-        String contraInput = jetcontra.getText().toString().trim();
-        if (contraInput.isEmpty()){
-            jetcontra.setError("El campo se debe estar lleno");
-            return false;
-        }else if (!PASSWORD_PATTERN.matcher(contraInput).matches()){
-            jetcontra.setError("La contraseña debe contener una mayuscula, un caracter especial y debe ser de mas de 8 digitos");
-            return false;
-        }
-        else {
-            jetcontra.setError(null);
-            return true;
-        }
-    }
-    private boolean validateCampos(){
+//
+    public boolean validar(){
+        boolean retorno = true;
         String nombre = jetnombre.getText().toString().trim();
         String ciudad = jetciudad.getText().toString().trim();
         String pais = jetpais.getText().toString().trim();
-        if (nombre.isEmpty()){
-            jetnombre.setError("El campo debe estar completo");
-            return false;
+        String contraInput = jetcontra.getText().toString().trim();
+        String emailInput = jetcorreo.getText().toString().trim();
+
+         if (nombre.isEmpty()){
+            jetnombre.setError("El campo se debe estar lleno");
+            retorno=false;
         }
-        else if (ciudad.isEmpty()){
-            jetciudad.setError("El campo debe estar completo");
-            return false;
+        if (emailInput.isEmpty()){
+            jetcorreo.setError("El campo se debe estar lleno");
+             retorno=false;
         }
-        else if (pais.isEmpty()){
-            jetpais.setError("El campo debe estar completo");
-            return false;
+        else if (!Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()){
+            jetcorreo.setError("Por favor ingrese un correo valido ");
+             retorno=false;
         }
+         if (pais.isEmpty()){
+            jetpais.setError("El campo se debe estar lleno");
+             retorno=false;
+        }
+         if (ciudad.isEmpty()){
+            jetciudad.setError("El campo se debe estar lleno");
+             retorno=false;
+        }
+          if (contraInput.isEmpty()){
+             jetcontra.setError("El campo se debe estar lleno");
+             retorno=false;
+         }
+         else if (!PASSWORD_PATTERN.matcher(contraInput).matches()){
+             jetcontra.setError("La contraseña debe contener una mayuscula, un caracter especial y debe ser de mas de 8 digitos");
+             retorno=false;
+         }
         else {
-            Toast.makeText(this, "Ingreso correctamente", Toast.LENGTH_SHORT).show();
-            return true;
+            jetcontra.setError(null);
+            jetcorreo.setError(null);
+            Toast.makeText(this, "Ingreso correctamente", Toast.LENGTH_SHORT).show();;
         }
+        createUser();
+        return retorno;
     }
 
     public void Pasar(View view) {
         Intent pasar = new Intent(MainActivity.this, Login.class);
         startActivity(pasar);
-        validateContra();
-        validateCorreo();
-        validateCampos();
-
     }
 
     public void createUser(){
@@ -134,20 +139,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        validateContra();
-        validateCorreo();
-        validateCampos();
-        /*createUser();*/
-        jbtregistro=findViewById(R.id.btregistro);
-
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
-        // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.options_array, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
-        spinner.setAdapter(adapter);
+        validar();
     }
 
     public void Login (View view){
