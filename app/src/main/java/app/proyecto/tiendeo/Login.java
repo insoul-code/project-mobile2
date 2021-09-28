@@ -30,23 +30,8 @@ public class Login extends AppCompatActivity {
 
     }
 
-    public void createUser(View view){
-        Map<String, Object> userData = new HashMap<>();
-        userData.put("email","santiago@gmail.com");
-        db.collection("users")
-                .add(userData)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Toast.makeText(getApplicationContext(),"Hola",Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                    }
-                });
-    }
+
+
     public void Registrarme (View view){
         Intent nombre = new Intent(this, MainActivity.class);
         startActivity(nombre);
