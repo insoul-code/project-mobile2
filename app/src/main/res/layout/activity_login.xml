@@ -61,12 +61,13 @@
         android:layout_marginBottom="24dp"
         android:layout_weight="1"
         android:backgroundTint="#525BDA"
+
         android:text="Iniciar sesión"
         android:textSize="14dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         tools:visibility="visible" />
 
@@ -77,7 +78,7 @@
         android:layout_marginBottom="88dp"
         android:layout_weight="1"
         android:backgroundTint="#CDCFEB"
-        android:onClick="Registrarme"
+        android:onClick="login"
         android:text="No tengo cuenta, Registrarme"
         android:textColor="#2B34B1"
         android:textSize="14dp"
