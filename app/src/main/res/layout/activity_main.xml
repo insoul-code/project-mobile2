@@ -118,7 +118,7 @@
         android:id="@+id/editTextTextPersonName7"
         android:layout_width="320dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="12dp"
         android:background="#fff"
         android:ems="10"
         android:hint="Nombre de la tienda"
@@ -127,6 +127,7 @@
         android:textColorHint="#4B4B4B"
         app:layout_constraintBottom_toTopOf="@+id/btregistro"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -142,7 +143,7 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.46" />
+        app:layout_constraintVertical_bias="0.676" />
 
     <Button
         android:id="@+id/btlogin"

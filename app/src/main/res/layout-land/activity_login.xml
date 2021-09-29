@@ -22,6 +22,8 @@
         android:id="@+id/etcorreoelectro"
         android:layout_width="400dp"
         android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="8dp"
         android:background="#fff"
         android:ems="10"
         android:hint="Correo electrónico"
@@ -33,12 +35,13 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/space"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.864" />
+        app:layout_constraintVertical_bias="1" />
 
     <EditText
         android:id="@+id/etcontrasena"
         android:layout_width="400dp"
         android:layout_height="60dp"
+        android:layout_marginStart="5dp"
         android:layout_marginBottom="12dp"
         android:background="#fff"
         android:ems="10"
@@ -51,7 +54,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/space"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.932" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btnPasar"
@@ -62,20 +65,20 @@
         android:backgroundTint="#525BDA"
         android:text="Iniciar sesión"
         android:textSize="14dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/space"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.974"
+        app:layout_constraintVertical_bias="1"
         tools:visibility="visible" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="400dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="30dp"
         android:layout_weight="1"
         android:backgroundTint="#CDCFEB"
         android:onClick="Registrarme"
@@ -87,12 +90,12 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/space"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.813" />
+        app:layout_constraintVertical_bias="0.968" />
 
     <Space
         android:id="@+id/space"
-        android:layout_width="20dp"
-        android:layout_height="445dp"
+        android:layout_width="10dp"
+        android:layout_height="408dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.362"
