@@ -31,12 +31,14 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_login);
 
         jetcontra=findViewById(R.id.etcontrasena);
         jetcorreo=findViewById(R.id.etcorreoelectro);
         jbtnPasar=findViewById(R.id.btnPasar);
         firebaseAuth = FirebaseAuth.getInstance();
+
 
     }
 
@@ -137,7 +139,7 @@ public class Login extends AppCompatActivity {
     }
 
     public void Registrarme (View view){
-        Intent nombre = new Intent(this, Login.class);
+        Intent nombre = new Intent(this, MainActivity.class);
         startActivity(nombre);
 
     }
