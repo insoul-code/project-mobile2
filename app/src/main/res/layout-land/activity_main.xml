@@ -11,9 +11,9 @@
 
     <EditText
         android:id="@+id/etnombre"
-        android:layout_width="485dp"
+        android:layout_width="488dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="4dp"
         android:background="#fff"
         android:hint="Nombre completo"
         android:inputType="textPersonName"
@@ -21,17 +21,16 @@
         android:textColorHint="#4B4B4B"
         app:layout_constraintBottom_toTopOf="@+id/etcorreo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.768"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/etcorreo"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.824" />
 
     <EditText
         android:id="@+id/etcontra"
-        android:layout_width="240dp"
+        android:layout_width="238dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="12dp"
         android:background="#fff"
         android:ems="10"
         android:hint="Contraseña"
@@ -39,16 +38,15 @@
         android:paddingHorizontal="10dp"
         android:textColorHint="#4B4B4B"
         app:layout_constraintBottom_toTopOf="@+id/spinner"
-        app:layout_constraintEnd_toStartOf="@+id/etciudad"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout" />
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/spinner" />
 
     <EditText
         android:id="@+id/etciudad"
-        android:layout_width="240dp"
+        android:layout_width="238dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="12dp"
         android:background="#fff"
         android:ems="10"
         android:hint="Ciudad"
@@ -60,10 +58,10 @@
 
     <EditText
         android:id="@+id/etpais"
-        android:layout_width="240dp"
+        android:layout_width="238dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="12dp"
         android:background="#fff"
         android:ems="10"
         android:hint="País"
@@ -75,10 +73,9 @@
 
     <EditText
         android:id="@+id/etcorreo"
-        android:layout_width="240dp"
+        android:layout_width="238dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="12dp"
         android:background="#fff"
         android:ems="10"
         android:hint="Correo electrónico"
@@ -86,32 +83,29 @@
         android:paddingHorizontal="10dp"
         android:textColorHint="#4B4B4B"
         app:layout_constraintBottom_toTopOf="@+id/etcontra"
-        app:layout_constraintEnd_toStartOf="@+id/etpais"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout" />
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/etcontra" />
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="240dp"
+        android:layout_width="238dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="36dp"
         android:autofillHints="name"
         android:background="#fff"
         android:paddingHorizontal="10dp"
         android:spinnerMode="dialog"
         app:layout_constraintBottom_toTopOf="@+id/btlogin"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName7"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/btlogin"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/editTextTextPersonName7"
-        android:layout_width="240dp"
+        android:layout_width="238dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="36dp"
         android:background="#fff"
         android:ems="10"
         android:hint="Nombre de la tienda"
@@ -161,10 +155,10 @@
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/linearLayout"
-        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintHorizontal_bias="0.262"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.091" />
+        app:layout_constraintVertical_bias="0.169" />
 
     <LinearLayout
         android:id="@+id/linearLayout"

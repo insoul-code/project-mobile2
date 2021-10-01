@@ -118,7 +118,7 @@
         android:id="@+id/editTextTextPersonName7"
         android:layout_width="320dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="16dp"
         android:background="#fff"
         android:ems="10"
         android:hint="Nombre de la tienda"
@@ -143,13 +143,13 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.676" />
+        app:layout_constraintVertical_bias="0.426" />
 
     <Button
         android:id="@+id/btlogin"
         android:layout_width="320dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="44dp"
         android:layout_weight="1"
         android:backgroundTint="#CDCFEB"
         android:onClick="Login"
@@ -158,6 +158,7 @@
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

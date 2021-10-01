@@ -15,9 +15,10 @@
         android:layout_marginTop="72dp"
         app:layout_constraintBottom_toTopOf="@+id/etcorreoelectro"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.454"
         app:srcCompat="@drawable/logo_tiendeo" />
 
     <EditText
@@ -33,7 +34,7 @@
         android:textColorHint="#4B4B4B"
         app:layout_constraintBottom_toTopOf="@+id/etcontrasena"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -42,7 +43,7 @@
         android:id="@+id/etcontrasena"
         android:layout_width="330dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="40dp"
         android:background="#fff"
         android:ems="10"
         android:hint="Contraseña"
@@ -51,7 +52,7 @@
         android:textColorHint="#4B4B4B"
         app:layout_constraintBottom_toTopOf="@+id/btnPasar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.395"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -60,13 +61,13 @@
         android:layout_height="60dp"
         android:layout_marginBottom="16dp"
         android:layout_weight="1"
-        android:onClick="login"
         android:backgroundTint="#525BDA"
+        android:onClick="login"
         android:text="Iniciar sesión"
         android:textSize="14dp"
-        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -81,7 +82,7 @@
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.895" />
