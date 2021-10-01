@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F6FA"
     android:paddingHorizontal="32dp"
     tools:context="app.proyecto.tiendeo.Login">
 
@@ -26,8 +25,8 @@
         android:layout_width="330dp"
         android:layout_height="60dp"
         android:layout_marginBottom="32dp"
-        android:background="#fff"
         android:ems="10"
+        android:background="#F2F2F2"
         android:hint="Correo electrónico"
         android:inputType="textPersonName"
         android:paddingHorizontal="10dp"
@@ -44,8 +43,8 @@
         android:layout_width="330dp"
         android:layout_height="60dp"
         android:layout_marginBottom="40dp"
-        android:background="#fff"
         android:ems="10"
+        android:background="#F2F2F2"
         android:hint="Contraseña"
         android:inputType="textPassword"
         android:paddingHorizontal="10dp"
