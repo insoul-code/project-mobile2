@@ -90,7 +90,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/space"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.968" />
+        app:layout_constraintVertical_bias="0.884" />
 
     <Space
         android:id="@+id/space"
