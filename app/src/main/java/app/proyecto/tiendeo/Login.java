@@ -42,7 +42,7 @@ public class Login extends AppCompatActivity {
 
     }
 
-    public void login (View view){
+    public void login (){
         String email = jetcorreo.getText().toString();
         String pass = jetcontra.getText().toString();
         firebaseAuth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -145,9 +145,22 @@ public class Login extends AppCompatActivity {
 
     }
 
+
+    public void onCLickLogin(View view){
+        String email = jetcorreo.getText().toString();
+        String pass = jetcontra.getText().toString();
+
+        if(email.isEmpty() || pass.isEmpty()){
+            Toast.makeText(Login.this, "Los Campos son requeridos", Toast.LENGTH_LONG).show();
+
+        }else {
+            login();
+        }
+
     public void LoginSuccess (){
         Intent loginRight = new Intent(this, Home.class);
         startActivity(loginRight);
+
 
     }
 
