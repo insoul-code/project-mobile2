@@ -249,7 +249,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        validar();
+        String nombre = jetnombre.getText().toString().trim();
+        String ciudad = jetciudad.getText().toString().trim();
+        String pais = jetpais.getText().toString().trim();
+        String contraInput = jetcontra.getText().toString().trim();
+        String emailInput = jetcorreo.getText().toString().trim();
+        if(nombre.isEmpty()||ciudad.isEmpty()||pais.isEmpty()||contraInput.isEmpty()||emailInput.isEmpty()){
+            Toast.makeText(MainActivity.this,"Todos los campos deben estar diligenciados",Toast.LENGTH_SHORT).show();
+        } else {
+            validar();
+        }
+
     }
 
     public void Login (View view){

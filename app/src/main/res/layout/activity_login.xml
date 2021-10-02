@@ -62,7 +62,7 @@
         android:layout_marginBottom="16dp"
         android:layout_weight="1"
         android:backgroundTint="#525BDA"
-        android:onClick="login"
+        android:onClick="onCLickLogin"
         android:text="Iniciar sesión"
         android:textSize="14dp"
         app:layout_constraintBottom_toTopOf="@+id/button"
