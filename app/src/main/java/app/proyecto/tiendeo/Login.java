@@ -50,6 +50,7 @@ public class Login extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
             if (task.isSuccessful()){
                 Toast.makeText(Login.this,"Inicio de sesion exitoso",Toast.LENGTH_SHORT).show();
+                LoginSuccess();
             }else {
                 String errorcode = ((FirebaseAuthException) task.getException()).getErrorCode();
                 dameToastdeerror(errorcode);
@@ -144,6 +145,7 @@ public class Login extends AppCompatActivity {
 
     }
 
+
     public void onCLickLogin(View view){
         String email = jetcorreo.getText().toString();
         String pass = jetcontra.getText().toString();
@@ -154,6 +156,11 @@ public class Login extends AppCompatActivity {
         }else {
             login();
         }
+
+    public void LoginSuccess (){
+        Intent loginRight = new Intent(this, Home.class);
+        startActivity(loginRight);
+
 
     }
 
