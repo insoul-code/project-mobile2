@@ -50,7 +50,6 @@ public class Login extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
             if (task.isSuccessful()){
                 Toast.makeText(Login.this,"Inicio de sesion exitoso",Toast.LENGTH_SHORT).show();
-                LoginSuccess();
             }else {
                 String errorcode = ((FirebaseAuthException) task.getException()).getErrorCode();
                 dameToastdeerror(errorcode);
@@ -146,27 +145,19 @@ public class Login extends AppCompatActivity {
     }
 
 
-    public void onCLickLogin(View view){
+    public void onCLickLogin(View view) {
         String email = jetcorreo.getText().toString();
         String pass = jetcontra.getText().toString();
 
-        if(email.isEmpty() || pass.isEmpty()){
+        if (email.isEmpty() || pass.isEmpty()) {
             Toast.makeText(Login.this, "Los Campos son requeridos", Toast.LENGTH_LONG).show();
 
-        }else {
+        } else {
             login();
         }
 
-    public void LoginSuccess (){
-        Intent loginRight = new Intent(this, Home.class);
-        startActivity(loginRight);
-
 
     }
-
-
-
-
 
 
 }
