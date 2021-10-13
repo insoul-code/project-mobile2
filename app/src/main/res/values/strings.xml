@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">projecto-final-mv2</string>
+    <string name="correoLogin">Correo electronico</string>
+    <string name="contraseñaLogin">Contraseña</string>
+    <string name="login">INICIAR SESIÓN</string>
+    <string name="registrar">NO TENGO CUENTA, REGISTRARME</string>
+
 
 </resources>

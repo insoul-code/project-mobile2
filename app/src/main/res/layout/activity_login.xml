@@ -4,86 +4,133 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="32dp"
     tools:context="app.proyecto.tiendeo.Login">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="107dp"
-        android:layout_height="133dp"
-        android:layout_marginTop="72dp"
-        app:layout_constraintBottom_toTopOf="@+id/etcorreoelectro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.454"
-        app:srcCompat="@drawable/logo_tiendeo" />
 
     <EditText
         android:id="@+id/etcorreoelectro"
-        android:layout_width="330dp"
+        android:layout_width="0dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="32dp"
-        android:ems="10"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="12dp"
         android:background="#F2F2F2"
-        android:hint="Correo electrónico"
+        android:ems="10"
+        android:hint="@string/correoLogin"
         android:inputType="textPersonName"
         android:paddingHorizontal="10dp"
         android:textColorHint="#4B4B4B"
-        app:layout_constraintBottom_toTopOf="@+id/etcontrasena"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/etcontrasena"
-        android:layout_width="330dp"
+        android:layout_width="0dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="40dp"
-        android:ems="10"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="4dp"
         android:background="#F2F2F2"
-        android:hint="Contraseña"
+        android:ems="10"
+        android:hint="@string/contraseñaLogin"
         android:inputType="textPassword"
         android:paddingHorizontal="10dp"
         android:textColorHint="#4B4B4B"
-        app:layout_constraintBottom_toTopOf="@+id/btnPasar"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnPasar"
-        android:layout_width="320dp"
+        android:layout_width="0dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:layout_weight="1"
-        android:backgroundTint="#525BDA"
+        android:backgroundTint="@color/primary11"
         android:onClick="onCLickLogin"
-        android:text="Iniciar sesión"
+        android:text="@string/login"
         android:textSize="14dp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintVertical_bias="0.812" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="320dp"
+        android:layout_width="0dp"
         android:layout_height="60dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="132dp"
         android:layout_weight="1"
         android:backgroundTint="#CDCFEB"
         android:onClick="Registrarme"
-        android:text="No tengo cuenta, Registrarme"
+        android:text="@string/registrar"
         android:textColor="#2B34B1"
         android:textSize="14dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/etcorreoelectro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/etcontrasena"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="141dp"
+        android:layout_height="157dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.895" />
+        app:layout_constraintVertical_bias="0.558"
+        app:srcCompat="@drawable/logo_tiendeo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
