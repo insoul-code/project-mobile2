@@ -50,6 +50,8 @@ public class Login extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
             if (task.isSuccessful()){
                 Toast.makeText(Login.this,"Inicio de sesion exitoso",Toast.LENGTH_SHORT).show();
+                Intent login = new Intent(Login.this, Home.class);
+                startActivity(login);
             }else {
                 String errorcode = ((FirebaseAuthException) task.getException()).getErrorCode();
                 dameToastdeerror(errorcode);
@@ -151,12 +153,9 @@ public class Login extends AppCompatActivity {
 
         if (email.isEmpty() || pass.isEmpty()) {
             Toast.makeText(Login.this, "Los Campos son requeridos", Toast.LENGTH_LONG).show();
-
         } else {
             login();
         }
-
-
     }
 
 

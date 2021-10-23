@@ -4,6 +4,8 @@
     <string name="login">INICIAR SESIÓN</string>
     <string name="registrar">NO TENGO CUENTA, REGISTRARME</string>
     <string name="app_name">Tiendeo app</string>
+    <string name="btn_edit">Editar</string>
+    <string name="btn_delete">Eliminar</string>
 
 
 </resources>
