@@ -6,6 +6,9 @@
     <string name="app_name">Tiendeo app</string>
     <string name="btn_edit">Editar</string>
     <string name="btn_delete">Eliminar</string>
+    <string name="pick_image">Seleccionar imagen</string>
+    <string name="add_product">Agregar producto</string>
+
 
 
 </resources>
