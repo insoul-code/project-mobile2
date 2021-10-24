@@ -3,6 +3,7 @@ package app.proyecto.tiendeo.Adapters;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 
+import app.proyecto.tiendeo.EditProductActivity;
 import app.proyecto.tiendeo.Entities.Product;
 import app.proyecto.tiendeo.databinding.ProductItemBinding;
 
@@ -75,6 +77,11 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         holder.itemBinding.btnDelete.setOnClickListener(v -> {
             builder.setMessage("¿Está seguro que desea eliminar el producto?");
             builder.create().show();
+        });
+        holder.itemBinding.btnEdit.setOnClickListener(view -> {
+            Intent intent = new Intent(context, EditProductActivity.class);
+            intent.putExtra("product", product);
+            context.startActivity(intent);
         });
     }
 
