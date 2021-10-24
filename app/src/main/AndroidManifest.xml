@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Projectofinalmv2">
         <activity
+            android:name=".AddProductActivity"
+            android:exported="false" />
+        <activity
             android:name=".Home"
             android:exported="true" />
         <activity
