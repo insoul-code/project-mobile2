@@ -24,7 +24,7 @@ import app.proyecto.tiendeo.databinding.ActivityAddProductBinding;
 
 public class AddProductActivity extends AppCompatActivity {
     private ActivityAddProductBinding addProductBinding;
-    private FirabaseStorage storage;
+    private FirebaseStorage storage;
     private StorageReference storageReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
