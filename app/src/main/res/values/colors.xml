@@ -10,4 +10,8 @@
     <color name="primary11">#2B34B1</color>
     <color name="primary_light">#283593</color>
     <color name="primary_night">#001064</color>
+    <color name="delete_color">#E23030</color>
+    <color name="edit_color">#525BDA</color>
+    <color name="title_color">#000000</color>
+    <color name="items_color">#262626</color>
 </resources>

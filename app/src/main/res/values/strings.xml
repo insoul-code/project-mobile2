@@ -13,12 +13,15 @@
     <string name="product_stock">Unidades disponibles</string>
     <string name="product_category">Categoria</string>
     <string name="RegistroNombre">Nombre Completo</string>
-    <string name="RegistroCorreo">Correo Electronico</string>
+    <string name="RegistroCorreo">Correo Electrónico</string>
     <string name="RegistroPais">Pais</string>
     <string name="RegistroCuidad">Cuidad</string>
     <string name="RegistroContraseña">Constraseña</string>
-    <string name="RegistroRol">Ingrese su rol</string>
+    <string name="RegistroRol">Seleccione su rol</string>
     <string name="RegistroNombreTienda">Nombre de la tienda</string>
     <string name="ProductosTitulo">Productos</string>
+    <string name="cantidad">Cantidad:</string>
+    <string name="precio">Precio:</string>
+    <string name="categoria">Categoría:</string>
 
 </resources>

@@ -10,22 +10,22 @@
 
     <Button
         android:id="@+id/btregistro"
-        android:layout_width="300dp"
-        android:layout_height="48dp"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
         android:backgroundTint="#525BDA"
         android:onClick="onClick"
         android:text="Registrarme"
-        android:textSize="14dp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/btlogin"
         app:layout_constraintEnd_toEndOf="@+id/btlogin"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btlogin"
         app:layout_constraintTop_toTopOf="@+id/guideline12"
-        app:layout_constraintVertical_bias="0.865" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/editTextTextPersonName7"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginBottom="15dp"
         android:background="#F2F2F2"
@@ -41,9 +41,9 @@
 
     <EditText
         android:id="@+id/etnombre"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="8dp"
         android:background="#F2F2F2"
         android:ems="10"
         android:inputType="textPersonName"
@@ -51,17 +51,17 @@
         android:textColorHint="#4B4B4B"
         app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="300dp"
-        android:layout_height="20dp"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
         android:layout_marginBottom="5dp"
         android:text="@string/RegistroRol"
         android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/spinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -69,11 +69,12 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="300dp"
-        android:layout_height="20dp"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
         android:layout_marginBottom="5dp"
         android:text="@string/RegistroContraseña"
         android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/etcontra"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -81,21 +82,21 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="300dp"
-        android:layout_height="20dp"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
         android:layout_marginBottom="5dp"
         android:text="@string/RegistroNombre"
         android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/etnombre"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline9"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.75" />
 
     <EditText
         android:id="@+id/etcorreo"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginBottom="10dp"
         android:background="#F2F2F2"
@@ -111,11 +112,12 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="300dp"
-        android:layout_height="20dp"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
         android:layout_marginBottom="5dp"
         android:text="@string/RegistroNombreTienda"
         android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
@@ -123,7 +125,7 @@
 
     <EditText
         android:id="@+id/etpais"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginBottom="10dp"
         android:background="#F2F2F2"
@@ -139,7 +141,7 @@
 
     <EditText
         android:id="@+id/etciudad"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginBottom="10dp"
         android:background="#F2F2F2"
@@ -155,7 +157,7 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginBottom="10dp"
         android:autofillHints="name"
@@ -170,7 +172,7 @@
 
     <EditText
         android:id="@+id/etcontra"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginBottom="10dp"
         android:background="#F2F2F2"
@@ -186,23 +188,24 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="300dp"
-        android:layout_height="20dp"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
         android:layout_marginBottom="5dp"
         android:text="@string/RegistroCorreo"
         android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/etcorreo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="300dp"
-        android:layout_height="20dp"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
         android:layout_marginBottom="5dp"
         android:text="@string/RegistroCuidad"
         android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/etciudad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
@@ -210,11 +213,12 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="300dp"
-        android:layout_height="20dp"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
         android:layout_marginBottom="5dp"
         android:text="@string/RegistroPais"
         android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/etpais"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -222,8 +226,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
         android:text="Registro"
         android:textColor="?android:textColorPrimary"
         android:textSize="30dp"
@@ -235,18 +239,17 @@
 
     <Button
         android:id="@+id/btlogin"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="8dp"
         android:layout_weight="1"
         android:backgroundTint="#CDCFEB"
         android:onClick="Login"
         android:text="Ya tengo una cuenta"
         android:textColor="#2B34B1"
-        android:textSize="14dp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
@@ -255,7 +258,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_begin="60dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline11"
@@ -269,13 +272,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintGuide_percent="0.80" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".02" />
+        app:layout_constraintGuide_percent=".01" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
