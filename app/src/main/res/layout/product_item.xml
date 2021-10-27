@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:textColor="@color/title_color"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -34,7 +34,7 @@
 
                 <TextView
                     android:id="@+id/lblStock"
-                    android:layout_width="101dp"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
@@ -61,13 +61,12 @@
 
                 <TextView
                     android:id="@+id/lblPrice"
-                    android:layout_width="212dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="0dp"
                     android:layout_marginBottom="10dp"
-                    android:layout_weight="1"
                     android:text="@string/precio"
                     android:textColor="@color/items_color"
                     android:textSize="18sp" />
@@ -75,9 +74,8 @@
                 <TextView
                     android:id="@+id/tvPrice"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:layout_weight="1"
                     android:textColor="@color/items_color"
                     android:textSize="18sp" />
 
@@ -90,20 +88,19 @@
 
                 <TextView
                     android:id="@+id/lblCategory"
-                    android:layout_width="115dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="0dp"
                     android:layout_marginBottom="10dp"
-                    android:layout_weight="1"
                     android:text="@string/categoria"
                     android:textColor="@color/items_color"
                     android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/tvCategory"
-                    android:layout_width="242dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:textColor="@color/items_color"
