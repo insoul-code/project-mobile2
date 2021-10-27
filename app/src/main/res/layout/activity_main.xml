@@ -11,11 +11,11 @@
     <Button
         android:id="@+id/btregistro"
         android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:backgroundTint="#525BDA"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/color_principal"
         android:onClick="onClick"
         android:text="Registrarme"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/btlogin"
         app:layout_constraintEnd_toEndOf="@+id/btlogin"
         app:layout_constraintHorizontal_bias="0.0"
@@ -27,7 +27,7 @@
         android:id="@+id/editTextTextPersonName7"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="10dp"
         android:background="#F2F2F2"
         android:ems="10"
         android:inputType="textPersonName"
@@ -35,7 +35,6 @@
         android:textColorHint="#4B4B4B"
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
@@ -240,14 +239,14 @@
     <Button
         android:id="@+id/btlogin"
         android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="2dp"
         android:layout_weight="1"
         android:backgroundTint="#CDCFEB"
         android:onClick="Login"
         android:text="Ya tengo una cuenta"
         android:textColor="#2B34B1"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -258,7 +257,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="60dp" />
+        app:layout_constraintGuide_percent="0.07" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline11"
@@ -272,7 +271,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.80" />
+        app:layout_constraintGuide_percent="0.84" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline10"
