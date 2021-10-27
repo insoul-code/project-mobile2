@@ -18,6 +18,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 
+import app.proyecto.tiendeo.AddProductActivity;
 import app.proyecto.tiendeo.EditProductActivity;
 import app.proyecto.tiendeo.Entities.Product;
 import app.proyecto.tiendeo.databinding.ProductItemBinding;
@@ -83,6 +84,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             intent.putExtra("product", product);
             context.startActivity(intent);
         });
+
     }
 
     @Override
