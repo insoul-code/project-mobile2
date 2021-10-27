@@ -7,8 +7,8 @@
     <string name="pick_image">Seleccionar imagen</string>
     <string name="add_product">Agregar producto</string>
     <string name="btn_update">Actualizar producto</string>
-    <string name="product_name">Nombre del product</string>
-    <string name="product_description">Descripcion</string>
+    <string name="product_name">Nombre del producto</string>
+    <string name="product_description">Descripción</string>
     <string name="product_price">Precio</string>
     <string name="product_stock">Unidades disponibles</string>
     <string name="product_category">Categoria</string>
@@ -23,5 +23,5 @@
     <string name="cantidad">Cantidad:</string>
     <string name="precio">Precio:</string>
     <string name="categoria">Categoría:</string>
-
+    <string name="NombreProducto">Nombre del producto</string>
 </resources>

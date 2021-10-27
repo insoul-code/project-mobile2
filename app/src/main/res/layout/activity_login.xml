@@ -44,24 +44,24 @@
     <Button
         android:id="@+id/btnPasar"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_weight="1"
-        android:backgroundTint="@color/primary11"
+        android:backgroundTint="@color/color_principal"
         android:onClick="onCLickLogin"
         android:text="@string/login"
-        android:textSize="16dp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:layout_constraintVertical_bias="0.555" />
+        app:layout_constraintVertical_bias="0.763" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="104dp"
@@ -70,7 +70,7 @@
         android:onClick="Registrarme"
         android:text="@string/registrar"
         android:textColor="#2B34B1"
-        android:textSize="16dp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -103,8 +103,8 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:text="@string/RegistroCorreo"
-        android:textSize="20dp"
         android:textColor="#000000"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/etcorreoelectro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -119,8 +119,8 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:text="@string/RegistroContraseña"
-        android:textSize="20dp"
         android:textColor="#000000"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/etcontrasena"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
