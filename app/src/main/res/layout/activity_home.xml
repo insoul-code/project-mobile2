@@ -64,6 +64,7 @@
         android:backgroundTint="#FF8433"
         android:insetTop="0dp"
         android:insetBottom="0dp"
+        android:onClick="createproduct"
         android:paddingLeft="11dp"
         android:textSize="24sp"
         app:icon="@drawable/baseline_add_24"
