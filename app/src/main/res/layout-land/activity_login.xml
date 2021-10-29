@@ -95,7 +95,7 @@
         android:onClick="Registrarme"
         android:text="@string/registrar"
         android:textColor="#2B34B1"
-        android:textSize="14sp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

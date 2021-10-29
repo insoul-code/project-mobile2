@@ -245,7 +245,7 @@
         android:onClick="Login"
         android:text="Ya tengo una cuenta"
         android:textColor="#2B34B1"
-        android:textSize="14sp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

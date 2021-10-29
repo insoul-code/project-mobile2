@@ -45,6 +45,31 @@ public class AddProductActivity extends AppCompatActivity
         db = FirebaseFirestore.getInstance();
     }
 
+    public void selectImageFromGallery(View view){
+        Intent intent = new Intent(Intent.ACTION_PICK);
+        intent.setType("image/*");
+        galleryLauncher.launch(intent);
+    }
+    private ActivityResultLauncher<Intent> galleryLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    //Obtenemos el resultado de seleccionar la imagen
+                    if(result.getResultCode()== Activity.RESULT_OK){
+                        Intent data = result.getData();
+                        Uri uri = data.getData();
+                        if(uri != null){
+                            addProductBinding.ivProduct.setImageURI(uri);
+                        }
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(), "canceled",Toast.LENGTH_LONG).show();
+                    }
+                }
+            }
+    );
+
 
 public void crearproducto(View view){
     Map<String, Object> dataProduct = new HashMap<>();
