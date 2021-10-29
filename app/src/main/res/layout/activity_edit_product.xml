@@ -7,7 +7,7 @@
     tools:context=".AddProductActivity">
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/txtPrecio"
         android:layout_width="0dp"
         android:layout_height="18dp"
         android:layout_marginLeft="30dp"
@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/txtCategoria"
         android:layout_width="0dp"
         android:layout_height="18dp"
         android:layout_marginLeft="30dp"
@@ -33,7 +33,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/txtUnidades"
         android:layout_width="0dp"
         android:layout_height="18dp"
         android:layout_marginLeft="30dp"
@@ -152,7 +152,7 @@
         android:minHeight="48dp"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintBottom_toTopOf="@+id/txtPrecio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -169,7 +169,7 @@
         android:minHeight="48dp"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView18"
+        app:layout_constraintBottom_toTopOf="@+id/txtUnidades"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -186,7 +186,7 @@
         android:minHeight="48dp"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView17"
+        app:layout_constraintBottom_toTopOf="@+id/txtCategoria"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
