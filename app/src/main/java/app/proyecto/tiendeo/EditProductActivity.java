@@ -1,9 +1,15 @@
 package app.proyecto.tiendeo;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -11,6 +17,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,6 +31,7 @@ public class EditProductActivity extends AppCompatActivity implements View.OnCli
 
     private ActivityEditProductBinding editProductBinding;
     private Product product;
+    private StorageReference storageReference;
     private FirebaseFirestore db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +50,31 @@ public class EditProductActivity extends AppCompatActivity implements View.OnCli
         editProductBinding.edtStockAvailable.setText(String.valueOf(product.getStock()));
         editProductBinding.edtCategory.setText(product.getCategory());
     }
+
+    public void selectImageFromGallery(View view){
+        Intent intent = new Intent(Intent.ACTION_PICK);
+        intent.setType("image/*");
+        galleryLauncher.launch(intent);
+    }
+    private ActivityResultLauncher<Intent> galleryLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    //Obtenemos el resultado de seleccionar la imagen
+                    if(result.getResultCode()== Activity.RESULT_OK){
+                        Intent data = result.getData();
+                        Uri uri = data.getData();
+                        if(uri != null){
+                            editProductBinding.ivProduct.setImageURI(uri);
+                        }
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(), "canceled",Toast.LENGTH_LONG).show();
+                    }
+                }
+            }
+    );
 
     @Override
     public void onClick(View v) {
