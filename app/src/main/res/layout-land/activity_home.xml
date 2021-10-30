@@ -29,7 +29,6 @@
         android:layout_width="419dp"
         android:layout_height="wrap_content"
         android:text="@string/ProductosTitulo"
-        android:textColor="@color/title_color"
         android:textSize="28dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
