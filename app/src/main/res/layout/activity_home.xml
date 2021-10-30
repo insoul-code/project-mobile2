@@ -30,7 +30,6 @@
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="4dp"
         android:text="@string/ProductosTitulo"
-        android:textColor="@color/title_color"
         android:textSize="28dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/logout"

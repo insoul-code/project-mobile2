@@ -30,7 +30,6 @@ public class Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
         mainBinding = ActivityHomeBinding.inflate(getLayoutInflater());
         View view = mainBinding.getRoot();
         setContentView(view);
