@@ -11,9 +11,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.Toast;
 import android.view.View;
 
+import com.google.android.gms.analytics.ecommerce.Product;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -21,28 +23,30 @@ import com.google.firebase.storage.StorageReference;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import app.proyecto.tiendeo.Entities.Product;
 import app.proyecto.tiendeo.databinding.ActivityAddProductBinding;
 import app.proyecto.tiendeo.databinding.ActivityEditProductBinding;
 
 
-public class AddProductActivity extends AppCompatActivity
-{
+public class AddProductActivity extends AppCompatActivity implements View.OnClickListener{
     private ActivityAddProductBinding addProductBinding;
     private FirebaseStorage storage;
     private StorageReference storageReference;
     public Product product;
     private FirebaseFirestore db;
+    EditText jprice, jstock, jproduct, jdescription, jcategory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addProductBinding = ActivityAddProductBinding.inflate(getLayoutInflater());
-        View v = addProductBinding.getRoot();
-        setContentView(v);
+        setContentView(R.layout.activity_add_product);
+        jproduct=findViewById(R.id.edtProduct);
+        jcategory=findViewById(R.id.edtCategory);
+        jdescription=findViewById(R.id.edtDescription);
+        jstock=findViewById(R.id.edtStockAvailable);
+        jprice=findViewById(R.id.edtPrice);
         db = FirebaseFirestore.getInstance();
     }
+
 
     public void selectImageFromGallery(View view){
         Intent intent = new Intent(Intent.ACTION_PICK);
@@ -69,14 +73,40 @@ public class AddProductActivity extends AppCompatActivity
             }
     );
 
+    public boolean validar(){
+        boolean retorno = true;
+        String product = jproduct.getText().toString().trim();
+        //String price = jprice.getText().toString().trim();
+        String description = jdescription.getText().toString().trim();
+        //String stock = jstock.getText().toString().trim();
+        String category = jcategory.getText().toString().trim();
 
-public void crearproducto(View view){
+        if (product.isEmpty()||description.isEmpty()||category.isEmpty()){
+            jcategory.setError("el campo debe estar lleno");
+            jprice.setError("el campo debe estar lleno");
+            jstock.setError("el campo debe estar lleno");
+            jproduct.setError("el campo debe estar lleno");
+            jdescription.setError("el campo debe estar lleno");
+        }
+        else {
+            crearproducto();
+            Toast.makeText(this, "Productos ingresados correctamente", Toast.LENGTH_SHORT).show();
+        }
+        return retorno;
+    }
+
+public void crearproducto(){
+    String product = jproduct.getText().toString().trim();
+    Double price = Double.valueOf(jprice.getText().toString().trim());
+    String description = jdescription.getText().toString().trim();
+    Integer stock = Integer.valueOf(jstock.getText().toString().trim());
+    String category = jcategory.getText().toString().trim();
     Map<String, Object> dataProduct = new HashMap<>();
-    dataProduct.put("name",addProductBinding.edtProduct.getText().toString());
-    dataProduct.put("description",addProductBinding.edtDescription.getText().toString());
-    dataProduct.put("price", Double.parseDouble(addProductBinding.edtPrice.getText().toString()));
-    dataProduct.put("stock", Integer.parseInt(addProductBinding.edtStockAvailable.getText().toString()));
-    dataProduct.put("category",addProductBinding.edtCategory.getText().toString());
+    dataProduct.put("name",product);
+    dataProduct.put("description",description);
+    dataProduct.put("price", price);
+    dataProduct.put("stock", stock);
+    dataProduct.put("category",category);
     db.collection("products")
             .add(dataProduct)
             .addOnSuccessListener(unused -> {
@@ -88,5 +118,19 @@ public void crearproducto(View view){
             });
 
 }
+
+    @Override
+    public void onClick(View v) {
+        String product = jproduct.getText().toString().trim();
+        //String price = jprice.getText().toString().trim();
+        String description = jdescription.getText().toString().trim();
+       // String stock = jstock.getText().toString().trim();
+        String category = jcategory.getText().toString().trim();
+        if (product.isEmpty()||description.isEmpty()||category.isEmpty()){
+            validar();
+        }else {
+            crearproducto();
+        }
     }
+}
 

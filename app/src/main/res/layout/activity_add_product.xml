@@ -218,7 +218,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:backgroundTint="@color/color_principal"
-        android:onClick="crearproducto"
+        android:onClick="onClick"
         android:text="@string/add_product"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toEndOf="parent"
