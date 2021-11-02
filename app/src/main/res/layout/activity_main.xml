@@ -23,223 +23,42 @@
         app:layout_constraintTop_toTopOf="@+id/guideline12"
         app:layout_constraintVertical_bias="1.0" />
 
-    <EditText
-        android:id="@+id/txtNombreTienda"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="24dp"
-        android:background="#F2F2F2"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:paddingHorizontal="10dp"
-        android:textColorHint="#4B4B4B"
-        app:layout_constraintBottom_toTopOf="@+id/guideline12"
-        app:layout_constraintEnd_toEndOf="@+id/btregistro"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btregistro"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-    <EditText
-        android:id="@+id/etnombre"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="8dp"
-        android:background="#F2F2F2"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:paddingHorizontal="10dp"
-        android:textColorHint="#4B4B4B"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
-        app:layout_constraintEnd_toEndOf="@+id/textView6"
-        app:layout_constraintStart_toStartOf="@+id/textView6"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="0dp"
-        android:layout_height="22dp"
-        android:layout_marginBottom="5dp"
-        android:text="@string/RegistroRol"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/spinner"
-        app:layout_constraintEnd_toEndOf="@+id/spinner"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/spinner" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="0dp"
-        android:layout_height="22dp"
-        android:layout_marginBottom="5dp"
-        android:text="@string/RegistroContraseña"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/etcontra"
-        app:layout_constraintEnd_toEndOf="@+id/etcontra"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/etcontra" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="@string/RegistroNombre"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/etnombre"
-        app:layout_constraintEnd_toEndOf="@+id/etnombre"
-        app:layout_constraintStart_toStartOf="@+id/etnombre" />
-
-    <EditText
-        android:id="@+id/etcorreo"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="10dp"
-        android:background="#F2F2F2"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:paddingHorizontal="10dp"
-        android:textColorHint="#4B4B4B"
-        app:layout_constraintBottom_toTopOf="@+id/textView12"
-        app:layout_constraintEnd_toEndOf="@+id/textView12"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/textView12"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="0dp"
-        android:layout_height="22dp"
-        android:layout_marginBottom="5dp"
-        android:text="@string/RegistroNombreTienda"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtNombreTienda"
-        app:layout_constraintEnd_toEndOf="@+id/txtNombreTienda"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/txtNombreTienda" />
-
-    <EditText
-        android:id="@+id/etpais"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="10dp"
-        android:background="#F2F2F2"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:paddingHorizontal="10dp"
-        android:textColorHint="#4B4B4B"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="@+id/textView7"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/textView7"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-    <EditText
-        android:id="@+id/etciudad"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="10dp"
-        android:background="#F2F2F2"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:paddingHorizontal="10dp"
-        android:textColorHint="#4B4B4B"
-        app:layout_constraintBottom_toTopOf="@+id/textView10"
-        app:layout_constraintEnd_toEndOf="@+id/textView10"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="10dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:autofillHints="name"
-        android:background="#F2F2F2"
         android:paddingHorizontal="10dp"
         android:spinnerMode="dialog"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="@+id/textView8"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-    <EditText
-        android:id="@+id/etcontra"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="10dp"
-        android:background="#F2F2F2"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:paddingHorizontal="10dp"
-        android:textColorHint="#4B4B4B"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="@+id/textView9"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="0dp"
-        android:layout_height="22dp"
-        android:layout_marginBottom="5dp"
-        android:text="@string/RegistroCorreo"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/etcorreo"
-        app:layout_constraintEnd_toEndOf="@+id/etcorreo"
-        app:layout_constraintStart_toStartOf="@+id/etcorreo" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="0dp"
-        android:layout_height="22dp"
-        android:layout_marginBottom="5dp"
-        android:text="@string/RegistroCuidad"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/etciudad"
-        app:layout_constraintEnd_toEndOf="@+id/etciudad"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/etciudad" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="0dp"
-        android:layout_height="22dp"
-        android:layout_marginBottom="5dp"
-        android:text="@string/RegistroPais"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/etpais"
-        app:layout_constraintEnd_toEndOf="@+id/etpais"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/etpais" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:text="Registro"
         android:textColor="?android:textColorPrimary"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
-        app:layout_constraintEnd_toEndOf="@+id/textView5"
-        app:layout_constraintHorizontal_bias="0.384"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline10" />
 
     <Button
         android:id="@+id/btlogin"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_weight="1"
         android:backgroundTint="#CDCFEB"
         android:onClick="Login"
@@ -249,6 +68,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btregistro"
         tools:ignore="TouchTargetSizeCheck" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -256,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="65dp" />
+        app:layout_constraintGuide_end="666dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline11"
@@ -278,5 +98,133 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent=".01" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputNombreCompleto"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Nombre completo"
+        app:layout_constraintBottom_toTopOf="@+id/inputCorreoRegistro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:startIconDrawable="@drawable/baseline_face_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etnombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputCorreoRegistro"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Correo electrónico"
+        app:layout_constraintBottom_toTopOf="@+id/inputPaisRegistro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputNombreCompleto"
+        app:startIconDrawable="@drawable/baseline_email_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etcorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputPaisRegistro"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="País"
+        app:layout_constraintBottom_toTopOf="@+id/inputTextCiudad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputCorreoRegistro"
+        app:startIconDrawable="@drawable/baseline_flag_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etpais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputTextCiudad"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Ciudad"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputPaisRegistro"
+        app:startIconDrawable="@drawable/baseline_location_city_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etciudad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Contraseña"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputTextCiudad"
+        app:startIconDrawable="@drawable/baseline_lock_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etcontra"
+            android:layout_width="match_parent"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout4"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="61dp"
+        android:hint="Nombre de la tienda"
+        app:layout_constraintBottom_toTopOf="@+id/btregistro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:startIconDrawable="@drawable/baseline_store_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtNombreTienda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

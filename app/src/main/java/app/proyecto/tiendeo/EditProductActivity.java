@@ -36,7 +36,6 @@ public class EditProductActivity extends AppCompatActivity implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
         editProductBinding = ActivityEditProductBinding.inflate(getLayoutInflater());
         View view = editProductBinding.getRoot();
         setContentView(view);

@@ -13,6 +13,7 @@ import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
@@ -30,7 +31,6 @@ public class Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
         mainBinding = ActivityHomeBinding.inflate(getLayoutInflater());
         View view = mainBinding.getRoot();
         setContentView(view);
@@ -45,6 +45,8 @@ public class Home extends AppCompatActivity {
 
     public void getProducts(){
         db.collection("products")
+                .whereEqualTo("category", "Teclados")
+                .orderBy("price", Query.Direction.ASCENDING)
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {

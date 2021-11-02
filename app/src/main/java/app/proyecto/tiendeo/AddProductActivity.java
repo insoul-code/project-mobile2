@@ -38,7 +38,6 @@ public class AddProductActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
         addProductBinding = ActivityAddProductBinding.inflate(getLayoutInflater());
         View v = addProductBinding.getRoot();
         setContentView(v);
