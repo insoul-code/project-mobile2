@@ -43,11 +43,11 @@ public class EditProductActivity extends AppCompatActivity implements View.OnCli
         Intent intent = getIntent();
         product = (Product) intent.getSerializableExtra("product");
         db = FirebaseFirestore.getInstance();
-        editProductBinding.edtProduct.setText(product.getName());
-        editProductBinding.edtDescription.setText(product.getDescription());
-        editProductBinding.edtPrice.setText(String.valueOf(product.getPrice()));
-        editProductBinding.edtStockAvailable.setText(String.valueOf(product.getStock()));
-        editProductBinding.edtCategory.setText(product.getCategory());
+        editProductBinding.editProduct.setText(product.getName());
+        editProductBinding.editDescription.setText(product.getDescription());
+        editProductBinding.editPrice.setText(String.valueOf(product.getPrice()));
+        editProductBinding.editStockAvailable.setText(String.valueOf(product.getStock()));
+        editProductBinding.editCategory.setText(product.getCategory());
     }
 
     public void selectImageFromGallery(View view){
@@ -78,11 +78,11 @@ public class EditProductActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View v) {
         Map<String, Object> dataProduct = new HashMap<>();
-        dataProduct.put("name",editProductBinding.edtProduct.getText().toString());
-        dataProduct.put("description",editProductBinding.edtDescription.getText().toString());
-        dataProduct.put("price", Double.valueOf(editProductBinding.edtPrice.getText().toString()));
-        dataProduct.put("stock", Integer.valueOf(editProductBinding.edtStockAvailable.getText().toString()));
-        dataProduct.put("category",editProductBinding.edtCategory.getText().toString());
+        dataProduct.put("name",editProductBinding.editProduct.getText().toString());
+        dataProduct.put("description",editProductBinding.editDescription.getText().toString());
+        dataProduct.put("price", Double.valueOf(editProductBinding.editPrice.getText().toString()));
+        dataProduct.put("stock", Integer.valueOf(editProductBinding.editStockAvailable.getText().toString()));
+        dataProduct.put("category",editProductBinding.editCategory.getText().toString());
         if (v.getId() == editProductBinding.btnProduct.getId()){
             db.collection("products")
                     .document(product.getId())
