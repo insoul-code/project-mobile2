@@ -80,8 +80,8 @@ public class EditProductActivity extends AppCompatActivity implements View.OnCli
         Map<String, Object> dataProduct = new HashMap<>();
         dataProduct.put("name",editProductBinding.edtProduct.getText().toString());
         dataProduct.put("description",editProductBinding.edtDescription.getText().toString());
-        dataProduct.put("price", Double.parseDouble(editProductBinding.edtPrice.getText().toString()));
-        dataProduct.put("stock", Integer.parseInt(editProductBinding.edtStockAvailable.getText().toString()));
+        dataProduct.put("price", Double.valueOf(editProductBinding.edtPrice.getText().toString()));
+        dataProduct.put("stock", Integer.valueOf(editProductBinding.edtStockAvailable.getText().toString()));
         dataProduct.put("category",editProductBinding.edtCategory.getText().toString());
         if (v.getId() == editProductBinding.btnProduct.getId()){
             db.collection("products")
