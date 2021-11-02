@@ -15,4 +15,5 @@
     <color name="title_color">#000000</color>
     <color name="items_color">#262626</color>
     <color name="color_principal">#525BDA</color>
+    <color name="bg_light">#E6E8FF</color>
 </resources>
