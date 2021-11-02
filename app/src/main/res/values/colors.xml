@@ -14,6 +14,9 @@
     <color name="edit_color">#525BDA</color>
     <color name="title_color">#000000</color>
     <color name="items_color">#262626</color>
-    <color name="color_principal">#525BDA</color>
+    <color name="color_principal">#536dfe</color>
+    <color name="color_secundario">#1de9b6</color>
+    <color name="color_stroke">#536dfe</color>
+    <color name="color_stroke_night">#1de9b6</color>
     <color name="bg_light">#E6E8FF</color>
 </resources>
