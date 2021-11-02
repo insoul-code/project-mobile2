@@ -25,12 +25,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
                     android:layout_weight="0"
-                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_image_upload_bro" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -50,19 +58,47 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/tvPrice"
-                            android:layout_width="187dp"
+                        <LinearLayout
+                            android:layout_width="189dp"
                             android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:textSize="18sp" />
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/tvStock"
+                            <TextView
+                                android:id="@+id/textView15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:text="Precio"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/tvPrice"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:textSize="18sp" />
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:text="Cantidad"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/tvStock"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:textSize="18sp" />
+                        </LinearLayout>
                     </LinearLayout>
 
                     <TextView
@@ -102,7 +138,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:backgroundTint="@color/edit_color"
+                            android:backgroundTint="@color/color_principal"
                             android:text="@string/btn_edit"
                             android:textSize="8sp"
                             app:icon="@drawable/baseline_edit_24"

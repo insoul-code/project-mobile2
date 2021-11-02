@@ -11,7 +11,7 @@
     <Button
         android:id="@+id/btregistro"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:backgroundTint="@color/color_principal"
         android:onClick="onClick"
         android:text="Registrarme"
@@ -27,9 +27,7 @@
         android:id="@+id/spinner"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
         android:autofillHints="name"
         android:paddingHorizontal="10dp"
         android:spinnerMode="dialog"
@@ -43,12 +41,11 @@
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
         android:text="Registro"
         android:textColor="?android:textColorPrimary"
         android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintBottom_toTopOf="@+id/inputNombreCompleto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline10" />
@@ -57,10 +54,8 @@
         android:id="@+id/btlogin"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_weight="1"
-        android:backgroundTint="#CDCFEB"
+        android:backgroundTint="@color/color_secundario"
         android:onClick="Login"
         android:text="Ya tengo una cuenta"
         android:textColor="#2B34B1"
@@ -70,13 +65,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btregistro"
         tools:ignore="TouchTargetSizeCheck" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="666dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline11"
@@ -90,7 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.84" />
+        app:layout_constraintGuide_percent="0.81" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline10"
@@ -104,9 +92,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="16dp"
         android:hint="Nombre completo"
         app:layout_constraintBottom_toTopOf="@+id/inputCorreoRegistro"
         app:layout_constraintEnd_toEndOf="parent"
@@ -125,9 +111,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
         android:hint="Correo electrónico"
         app:layout_constraintBottom_toTopOf="@+id/inputPaisRegistro"
         app:layout_constraintEnd_toEndOf="parent"
@@ -146,9 +130,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
         android:hint="País"
         app:layout_constraintBottom_toTopOf="@+id/inputTextCiudad"
         app:layout_constraintEnd_toEndOf="parent"
@@ -167,9 +149,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
         android:hint="Ciudad"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -188,9 +168,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
         android:hint="Contraseña"
         app:layout_constraintBottom_toTopOf="@+id/spinner"
         app:layout_constraintEnd_toEndOf="parent"
@@ -201,8 +179,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etcontra"
             android:layout_width="match_parent"
-            android:inputType="textPassword"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -210,9 +188,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginBottom="61dp"
         android:hint="Nombre de la tienda"
         app:layout_constraintBottom_toTopOf="@+id/btregistro"
