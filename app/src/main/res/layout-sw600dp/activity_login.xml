@@ -7,7 +7,7 @@
     tools:context="app.proyecto.tiendeo.Login">
 
     <EditText
-        android:id="@+id/etcorreoelectro"
+        android:id="@+id/etcorreoelectro1"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginLeft="30dp"
@@ -100,7 +100,7 @@
         android:layout_marginEnd="30dp"
         android:text="@string/RegistroCorreo"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/etcorreoelectro"
+        app:layout_constraintBottom_toTopOf="@+id/etcorreoelectro1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
