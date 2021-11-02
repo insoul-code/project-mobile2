@@ -15,7 +15,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import android.view.View;
 
-//import com.google.android.gms.analytics.ecommerce.Product;
+import com.google.android.gms.analytics.ecommerce.Product;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -24,7 +24,6 @@ import com.google.firebase.storage.StorageReference;
 import java.util.HashMap;
 import java.util.Map;
 
-import app.proyecto.tiendeo.Entities.Product;
 import app.proyecto.tiendeo.databinding.ActivityAddProductBinding;
 import app.proyecto.tiendeo.databinding.ActivityEditProductBinding;
 
