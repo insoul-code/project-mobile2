@@ -19,4 +19,6 @@
     <color name="color_stroke">#536dfe</color>
     <color name="color_stroke_night">#1de9b6</color>
     <color name="bg_light">#E6E8FF</color>
+    <color name="bg_yellow">#FFDB26</color>
+    <color name="mtrl_textinput_default_box_stroke_color">#CFCFCF</color>
 </resources>
