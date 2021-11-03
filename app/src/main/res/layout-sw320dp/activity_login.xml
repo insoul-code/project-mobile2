@@ -45,14 +45,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.35" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.69" />
+        app:layout_constraintGuide_percent="0.8" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -97,11 +97,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:hint="Correo electrónico"
-        app:hintTextColor="?attr/boxStrokeColor"
         app:boxStrokeColor="?attr/boxStrokeColor"
+        app:hintTextColor="?attr/boxStrokeColor"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayoutContra"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,10 +120,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
         android:hint="Contraseña"
-        app:hintTextColor="?attr/boxStrokeColor"
         app:boxStrokeColor="?attr/boxStrokeColor"
+        app:hintTextColor="?attr/boxStrokeColor"
         app:layout_constraintBottom_toTopOf="@+id/btnPasar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
