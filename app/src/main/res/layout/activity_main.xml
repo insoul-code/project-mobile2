@@ -23,20 +23,6 @@
         app:layout_constraintTop_toTopOf="@+id/guideline12"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:autofillHints="name"
-        android:paddingHorizontal="10dp"
-        android:spinnerMode="dialog"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="0dp"
@@ -92,7 +78,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="32dp"
         android:hint="Nombre completo"
         app:layout_constraintBottom_toTopOf="@+id/inputCorreoRegistro"
         app:layout_constraintEnd_toEndOf="parent"
@@ -170,7 +156,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:hint="Contraseña"
-        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout13"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputTextCiudad"
@@ -189,18 +175,38 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="61dp"
+        android:layout_marginBottom="32dp"
         android:hint="Nombre de la tienda"
         app:layout_constraintBottom_toTopOf="@+id/btregistro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout13"
         app:startIconDrawable="@drawable/baseline_store_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtNombreTienda"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:id="@+id/textInputLayout13"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+        app:startIconDrawable="@drawable/baseline_supervised_user_circle_24">
+
+        <AutoCompleteTextView
+            android:id="@+id/selectRol"
+            android:layout_width="match_parent"
+            android:inputType="none"
+            android:layout_height="wrap_content"
+            android:hint="Seleccione su Rol" />
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
