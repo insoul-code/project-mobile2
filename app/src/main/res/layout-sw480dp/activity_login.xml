@@ -33,7 +33,7 @@
         android:onClick="Registrarme"
         android:text="@string/registrar"
         android:textColor="#2B34B1"
-        android:textSize="12sp"
+        android:textSize="13sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,7 +110,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etcorreoelectro"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="16dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -132,7 +133,8 @@
             android:id="@+id/etcontrasena"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textSize="16dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
