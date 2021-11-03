@@ -11,6 +11,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=*])(?=\\S+$).{8,}$");
     FirebaseAuth firebaseAuth;
 
-    EditText jetnombre, jetcorreo, jetpais, jetciudad, jetcontra;
+    EditText jetnombre, jetcorreo, jetpais, jetciudad, jetcontra, jetSelectRol;
     Button jbtregistro;
     Spinner spinner;
     RadioButton jradioVendedor, jradioUsuario;
@@ -62,12 +63,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         jbtregistro=findViewById(R.id.btregistro);
 //        jbtregistro.setOnClickListener(this);
         firebaseAuth = FirebaseAuth.getInstance();
-        spinner=(Spinner)findViewById(R.id.spinner);
 
-        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,R.array.options_array, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-
+        String[] ListItems = getResources().getStringArray(R.array.options_array);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                R.layout.list_item, ListItems);
+        AutoCompleteTextView textView = (AutoCompleteTextView)
+                findViewById(R.id.selectRol);
+        textView.setAdapter(adapter);
     }
 //
     public boolean validar(){
