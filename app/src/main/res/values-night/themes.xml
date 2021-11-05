@@ -14,5 +14,6 @@
         <item name="background">@color/black</item>
         <!-- Customize your theme here. -->
         <item name="boxStrokeColor">@color/color_stroke_night</item>
+        <item name="background">@color/black</item>
     </style>
 </resources>
