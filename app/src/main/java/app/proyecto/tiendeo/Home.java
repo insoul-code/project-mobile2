@@ -45,8 +45,8 @@ public class Home extends AppCompatActivity {
 
     public void getProducts(){
         db.collection("products")
-                .whereEqualTo("category", "Teclados")
-                .orderBy("price", Query.Direction.ASCENDING)
+                //.whereEqualTo("category", "Teclados")
+                //.orderBy("price", Query.Direction.ASCENDING)
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
