@@ -68,7 +68,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:backgroundTint="@color/color_principal"
-        android:onClick="onClick"
+        android:onClick="addProduct"
         android:text="@string/add_product"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
