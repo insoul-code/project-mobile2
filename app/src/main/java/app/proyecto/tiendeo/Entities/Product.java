@@ -13,6 +13,7 @@ public class Product implements Serializable {
     private int stock;
     private double price;
     private String category;
+    private String image;
 
     public String getId() {
         return id;
@@ -28,6 +29,14 @@ public class Product implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getDescription() {
