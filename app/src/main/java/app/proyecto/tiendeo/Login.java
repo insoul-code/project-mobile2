@@ -1,7 +1,10 @@
 package app.proyecto.tiendeo;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,12 +13,16 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.basgeekball.awesomevalidation.AwesomeValidation;
+import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -25,11 +32,16 @@ public class Login extends AppCompatActivity {
     EditText jetcorreo, jetcontra;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     FirebaseAuth firebaseAuth;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.SplashTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+
+
 
         jetcontra=findViewById(R.id.etcontrasena);
         jetcorreo=findViewById(R.id.etcorreoelectro);
@@ -37,24 +49,6 @@ public class Login extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
 
-    }
-
-    public void login (){
-        String email = jetcorreo.getText().toString();
-        String pass = jetcontra.getText().toString();
-        firebaseAuth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-            if (task.isSuccessful()){
-                Toast.makeText(Login.this,"Inicio de sesion exitoso",Toast.LENGTH_SHORT).show();
-                Intent login = new Intent(Login.this, Home.class);
-                startActivity(login);
-            }else {
-                String errorcode = ((FirebaseAuthException) task.getException()).getErrorCode();
-                dameToastdeerror(errorcode);
-            }
-            }
-        });
     }
 
     private void dameToastdeerror(String error) {
@@ -137,22 +131,94 @@ public class Login extends AppCompatActivity {
         }
     }
 
-    public void Registrarme (View view){
-        Intent nombre = new Intent(this, MainActivity.class);
-        startActivity(nombre);
 
-    }
 
 
     public void onCLickLogin(View view) {
         String email = jetcorreo.getText().toString();
         String pass = jetcontra.getText().toString();
 
+        db.collection("usuarios").whereEqualTo("email", email)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                String nombre = (String) document.get("nombre");
+                                String rol = (String) document.get("rol");
+                                String nombre_tienda = (String) document.get("nombre_tienda");
+
+                                Context context = getApplicationContext();
+                                SharedPreferences sharedPref = context.getSharedPreferences(
+                                        getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor = sharedPref.edit();
+                                editor.putString("nombre", nombre);
+                                editor.putString("rol", rol);
+                                editor.putString("nombre_tienda", nombre_tienda);
+                                editor.putString("email", email);
+                                editor.putBoolean("session", true);
+                                editor.commit();
+
+                            }
+                        } else {
+                            String errorcode = ((FirebaseAuthException) task.getException()).getErrorCode();
+                            dameToastdeerror(errorcode);
+                        }
+                    }
+
+                });
+
         if (email.isEmpty() || pass.isEmpty()) {
             Toast.makeText(Login.this, "Los Campos son requeridos", Toast.LENGTH_LONG).show();
         } else {
-            login();
+
+            firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(task.isSuccessful()){
+                        //irahome();
+                        Context context = getApplicationContext();
+                        SharedPreferences sharedPref = context.getSharedPreferences(
+                                getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+                        String tipousuario = sharedPref.getString("rol","");
+
+                        String t = "Vendedor";
+                        if(tipousuario.equals("Usuario")){
+                            listUser();
+                        }
+                        else if(tipousuario.equals("Vendedor")){
+                            list();
+                        }
+
+                    }
+                    else {
+                        String errorCode = ((FirebaseAuthException) task.getException()).getErrorCode();
+                        dameToastdeerror(errorCode);
+                    }
+                }
+
+            });
+
+
+
         }
+    }
+
+    public void Registrarme (View view){
+        Intent nombre = new Intent(this, MainActivity.class);
+        startActivity(nombre);
+
+    }
+
+    private void listUser(){
+        Intent intent = new Intent(this,ListproductsUser.class);
+        startActivity(intent);
+    }
+
+    private void list(){
+        Intent intent1 = new Intent(this,Home.class);
+        startActivity(intent1);
     }
 
 
