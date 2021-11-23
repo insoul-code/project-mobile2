@@ -128,16 +128,6 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
-                        <EditText
-                            android:id="@+id/editTextTextPersonName"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:textSize="10sp"
-                            android:inputType="textPersonName"
-                            android:text="Cantidad" />
-
                         <Button
                             android:id="@+id/btnAddProduct"
                             android:layout_width="match_parent"
