@@ -1,4 +1,7 @@
 package app.proyecto.tiendeo;
 
-public class ListproductsUser {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class ListproductsUser extends AppCompatActivity {
+
 }

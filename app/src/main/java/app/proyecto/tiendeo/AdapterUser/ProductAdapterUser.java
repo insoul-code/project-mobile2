@@ -79,15 +79,15 @@ public class ProductAdapterUser extends RecyclerView.Adapter<app.proyecto.tiende
 
             }
         });
-        holder.itemBinding.btnDelete.setOnClickListener(v -> {
-            builder.setMessage("¿Está seguro que desea eliminar el producto?");
-            builder.create().show();
-        });
-        holder.itemBinding.btnEdit.setOnClickListener(view -> {
-            Intent intent = new Intent(context, EditProductActivity.class);
-            intent.putExtra("product", product);
-            context.startActivity(intent);
-        });
+//        holder.itemBinding.btnDelete.setOnClickListener(v -> {
+//            builder.setMessage("¿Está seguro que desea eliminar el producto?");
+//            builder.create().show();
+//        });
+//        holder.itemBinding.btnEdit.setOnClickListener(view -> {
+//            Intent intent = new Intent(context, EditProductActivity.class);
+//            intent.putExtra("product", product);
+//            context.startActivity(intent);
+//        });
     }
 
     @Override
