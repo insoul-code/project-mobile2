@@ -23,6 +23,12 @@
             android:name=".Home"
             android:exported="true" />
         <activity
+            android:name=".ListBuyUser"
+            android:exported="true"/>
+        <activity
+            android:name=".ListproductsUser"
+            android:exported="true"/>
+        <activity
             android:name=".Login"
             android:exported="true"
             android:theme="@style/SplashTheme">

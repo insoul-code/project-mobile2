@@ -12,6 +12,7 @@ public class Product implements Serializable {
     private String description;
     private int stock;
     private double price;
+    private String nombre_tienda;
     private String category;
     private String image;
 
@@ -45,6 +46,14 @@ public class Product implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getNombre_tienda() {
+        return nombre_tienda;
+    }
+
+    public void setNombre_tienda(String nombre_tienda) {
+        this.nombre_tienda = nombre_tienda;
     }
 
     public int getStock() {
