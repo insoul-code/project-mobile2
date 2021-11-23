@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=*])(?=\\S+$).{8,}$");
     FirebaseAuth firebaseAuth;
 
-    EditText jetnombre, jetcorreo, jetpais, jetciudad, jetcontra, jetSelectRol;
+    EditText jetnombre, jetcorreo, jetpais, jetciudad, jetcontra, jetSelectRol, jetTienda;
     Button jbtregistro;
     Spinner spinner;
     RadioButton jradioVendedor, jradioUsuario;
@@ -61,6 +61,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         jetciudad=findViewById(R.id.etciudad);
         jetcontra=findViewById(R.id.etcontra);
         jbtregistro=findViewById(R.id.btregistro);
+        jetSelectRol=findViewById(R.id.selectRol);
+        jetTienda = findViewById(R.id.txtNombreTienda);
 //        jbtregistro.setOnClickListener(this);
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -79,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String pais = jetpais.getText().toString().trim();
         String contraInput = jetcontra.getText().toString().trim();
         String emailInput = jetcorreo.getText().toString().trim();
+        String rol = jetSelectRol.getText().toString().trim();
 
          if (nombre.isEmpty()){
             jetnombre.setError("El campo se debe estar lleno");
@@ -108,6 +111,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
              jetcontra.setError("La contraseña debe contener una mayuscula, un caracter especial y debe ser de mas de 8 digitos");
              retorno=false;
          }
+         if (rol.equals("Usuario")){
+
+         }
         else {
             jetcontra.setError(null);
             jetcorreo.setError(null);
@@ -130,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         register.put("pais",jetpais.getText().toString());
         register.put("ciudad",jetciudad.getText().toString());
         register.put("pass",jetcontra.getText().toString());
-        register.put("rol","");
+        register.put("rol",jetSelectRol.getText().toString());
         register.put("nombre_tienda","");
         db.collection("usuarios")
                 .add(register)
