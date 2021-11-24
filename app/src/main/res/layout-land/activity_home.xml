@@ -52,35 +52,26 @@
         app:iconGravity="textStart"
         app:layout_constraintBottom_toTopOf="@+id/rvProducts"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/logadd"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.535"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/logadd"
+        android:id="@+id/logout2"
         android:layout_width="0dp"
         android:layout_height="45dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="8dp"
-        android:layout_marginRight="10dp"
-        android:backgroundTint="@color/color_secundario"
+        android:layout_marginEnd="128dp"
+        android:backgroundTint="@color/color_principal"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:onClick="createproduct"
-        android:paddingLeft="11dp"
-        android:textSize="24sp"
-        app:icon="@drawable/baseline_add_24"
+        android:onClick="logout"
+        app:icon="@drawable/baseline_receipt_long_24"
         app:iconGravity="textStart"
-        app:iconPadding="0dp"
         app:layout_constraintBottom_toTopOf="@+id/rvProducts"
-        app:layout_constraintEnd_toStartOf="@+id/logout"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tituloProductos"
-        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline15"
@@ -88,5 +79,20 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.60" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/logadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:onClick="createproduct"
+        app:fabSize="auto"
+        android:src="@drawable/baseline_add_24"
+        app:backgroundTint="@color/color_secundario"
+        app:layout_constraintBottom_toBottomOf="@+id/rvProducts"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
