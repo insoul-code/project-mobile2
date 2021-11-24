@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="Registro"
-                android:textColor="?android:textColorPrimary"
+                android:textColor="?attr/color"
                 android:textSize="30dp"
                 app:layout_constraintBottom_toTopOf="@+id/inputNombreCompleto"
                 app:layout_constraintEnd_toEndOf="parent"

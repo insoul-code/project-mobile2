@@ -51,6 +51,7 @@
                         android:layout_margin="5dp"
                         android:layout_marginTop="15dp"
                         android:paddingTop="10dp"
+                        android:textColor="?attr/color"
                         android:text="Nombre del producto"
                         android:textSize="14sp"
                         android:textStyle="bold" />

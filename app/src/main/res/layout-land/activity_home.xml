@@ -30,6 +30,7 @@
         android:layout_marginLeft="20dp"
         android:text="@string/ProductosTitulo"
         android:textSize="28dp"
+        android:textColor="?attr/color"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toStartOf="@+id/guideline15"
