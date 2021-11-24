@@ -39,14 +39,14 @@
         android:backgroundTint="@color/color_principal"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:onClick="logout"
+        android:onClick="logOut"
         android:paddingLeft="12dp"
         app:icon="@drawable/baseline_logout_24"
         app:layout_constraintBottom_toTopOf="@+id/rvListProductsPurchased"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tituloProductos"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        tools:ignore="OnClick,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline15"

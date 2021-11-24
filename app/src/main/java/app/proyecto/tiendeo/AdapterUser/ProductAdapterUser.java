@@ -19,6 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 
+import app.proyecto.tiendeo.BuyUserShop;
 import app.proyecto.tiendeo.Entities.Product;
 import app.proyecto.tiendeo.ListBuyUser;
 import app.proyecto.tiendeo.databinding.ProductItemUserBinding;
@@ -84,7 +85,7 @@ public class ProductAdapterUser extends RecyclerView.Adapter<ProductAdapterUser.
         holder.itemUserBinding.btnAddProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, ListBuyUser.class);
+                Intent intent = new Intent(context, BuyUserShop.class);
                 intent.putExtra("product", product);
                 context.startActivity(intent);
             }

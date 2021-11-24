@@ -19,7 +19,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+import app.proyecto.tiendeo.Entities.Product;
 import app.proyecto.tiendeo.Entities.Shop;
+import app.proyecto.tiendeo.ListBuyUser;
 import app.proyecto.tiendeo.databinding.ProductItemUserPurchasedBinding;
 
 public class ProductListAdapterUser extends RecyclerView.Adapter<ProductListAdapterUser.ProductViewHolder> {
@@ -28,6 +30,13 @@ public class ProductListAdapterUser extends RecyclerView.Adapter<ProductListAdap
     private ProductItemUserPurchasedBinding productItemUserPurchasedBinding;
     private ArrayList<Shop> productListArrayList;
     private FirebaseFirestore db;
+
+    public ProductListAdapterUser(ListBuyUser context, ArrayList<Shop> productArrayList, FirebaseFirestore db) {
+        this.context = context;
+        this.productListArrayList = productArrayList;
+        this.db = db;
+    }
+
     @NonNull
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -39,7 +48,7 @@ public class ProductListAdapterUser extends RecyclerView.Adapter<ProductListAdap
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
         Shop shopping = productListArrayList.get(position);
         holder.itemBinding.tvName.setText(shopping.getName());
-        holder.itemBinding.tvCantidad.setText(String.valueOf(shopping.getUnits()));
+        holder.itemBinding.tvStock.setText(String.valueOf(shopping.getUnits()));
         DecimalFormat formato = new DecimalFormat("$#,###.###");
         String valorFormateado = formato.format((shopping.getPrice()*shopping.getUnits()));
         holder.itemBinding.tvPrice.setText(valorFormateado);

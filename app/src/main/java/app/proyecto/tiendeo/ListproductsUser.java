@@ -99,7 +99,7 @@ public class ListproductsUser extends AppCompatActivity {
         startActivity(intent);
     }
     public void listProducts(View view){
-        Intent intent = new Intent(this,ListproductsUser.class);
+        Intent intent = new Intent(this,ListBuyUser.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
