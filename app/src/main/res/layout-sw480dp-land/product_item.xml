@@ -53,6 +53,7 @@
                         android:layout_marginTop="15dp"
                         android:paddingTop="10dp"
                         android:textSize="15dp"
+                        android:textColor="?attr/color"
                         android:textStyle="bold" />
 
                     <LinearLayout

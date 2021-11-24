@@ -52,6 +52,7 @@
                         android:layout_marginTop="15dp"
                         android:paddingTop="10dp"
                         android:textSize="16sp"
+                        android:textColor="?attr/color"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -116,13 +117,6 @@
                         android:layout_margin="5dp"
                         android:textSize="14sp" />
 
-                    <TextView
-                        android:id="@+id/tvTienda"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:textSize="14sp" />
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -132,7 +126,7 @@
                             android:id="@+id/btnAddProduct"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
+                            android:layout_margin="5dp"
                             android:layout_weight="1"
                             android:backgroundTint="@color/color_principal"
                             android:textSize="8sp"
@@ -142,9 +136,21 @@
 
 
                     </LinearLayout>
+
                 </LinearLayout>
 
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTienda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E5FFFB"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:textColor="@color/color_principal"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
