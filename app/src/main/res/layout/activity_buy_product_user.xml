@@ -177,7 +177,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:backgroundTint="@color/color_principal"
-                android:onClick="addProduct"
+                android:onClick="updateShop"
                 android:text="Comprar producto"
                 app:icon="@drawable/baseline_add_shopping_cart_24"
                 app:iconGravity="textEnd"
@@ -186,7 +186,8 @@
                 app:layout_constraintHorizontal_bias="0.505"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/guideline6"
-                app:layout_constraintVertical_bias="0.56" />
+                app:layout_constraintVertical_bias="0.56"
+                tools:ignore="OnClick" />
         </LinearLayout>
     </ScrollView>
 

@@ -7,6 +7,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Selection;
 import android.util.Patterns;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=*])(?=\\S+$).{8,}$");
     FirebaseAuth firebaseAuth;
 
-    EditText jetnombre, jetcorreo, jetpais, jetciudad, jetcontra, jetSelectRol;
+    EditText jetnombre, jetcorreo, jetpais, jetciudad, jetcontra, jetSelectRol, jetTienda;
     Button jbtregistro;
     Spinner spinner;
     RadioButton jradioVendedor, jradioUsuario;
@@ -61,6 +62,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         jetciudad=findViewById(R.id.etciudad);
         jetcontra=findViewById(R.id.etcontra);
         jbtregistro=findViewById(R.id.btregistro);
+        jetSelectRol=findViewById(R.id.selectRol);
+        jetTienda = findViewById(R.id.txtNombreTienda);
 //        jbtregistro.setOnClickListener(this);
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -79,6 +82,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String pais = jetpais.getText().toString().trim();
         String contraInput = jetcontra.getText().toString().trim();
         String emailInput = jetcorreo.getText().toString().trim();
+        String rol = jetSelectRol.getText().toString().trim();
+        String tienda = jetTienda.getText().toString().trim();
 
          if (nombre.isEmpty()){
             jetnombre.setError("El campo se debe estar lleno");
@@ -108,6 +113,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
              jetcontra.setError("La contraseña debe contener una mayuscula, un caracter especial y debe ser de mas de 8 digitos");
              retorno=false;
          }
+         if (rol.equals("Seleccione su rol")){
+                jetSelectRol.setError("Seleccione un rol");
+                retorno = false;
+         }
+         if (rol.equals("Vendedor")){
+                jetTienda.setVisibility(View.VISIBLE);
+             retorno = false;
+         }
+         else if (rol.equals("Usuario")){
+             jetTienda.setVisibility(View.GONE);
+             retorno = false;
+         }
+         if (tienda.equals("") && rol == "Vendedor"){
+             jetTienda.setError("Ingrese el nombre de su tienda");
+             retorno = false;
+         }
         else {
             jetcontra.setError(null);
             jetcorreo.setError(null);
@@ -130,8 +151,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         register.put("pais",jetpais.getText().toString());
         register.put("ciudad",jetciudad.getText().toString());
         register.put("pass",jetcontra.getText().toString());
-        register.put("rol","");
-        register.put("nombre_tienda","");
+        register.put("rol",jetSelectRol.getText().toString());
+        register.put("nombre_tienda",jetTienda.getText().toString());
         db.collection("usuarios")
                 .add(register)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
@@ -240,8 +261,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }else{
                     String errorcode = ((FirebaseAuthException) task.getException()).getErrorCode();
                     dameToastdeerror(errorcode);
-
-
                 }
             }
         });
@@ -254,9 +273,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String pais = jetpais.getText().toString().trim();
         String contraInput = jetcontra.getText().toString().trim();
         String emailInput = jetcorreo.getText().toString().trim();
+        String rol = jetSelectRol.getText().toString().trim();
+        String tienda = jetTienda.getText().toString().trim();
+
         if(nombre.isEmpty()||ciudad.isEmpty()||pais.isEmpty()||contraInput.isEmpty()||emailInput.isEmpty()){
             Toast.makeText(MainActivity.this,"Todos los campos deben estar diligenciados",Toast.LENGTH_SHORT).show();
-        } else {
+        }if (rol.equals("")){
+            jetSelectRol.setError("Seleccione su rol");
+        }
+        if (rol.equals("Vendedor")){
+            jetTienda.setVisibility(View.VISIBLE);
+        }
+        else if (rol.equals("Usuario")){
+            jetTienda.setVisibility(View.GONE);
+        }
+        if (tienda.isEmpty() && rol == "Vendedor"){
+            jetTienda.setError("Ingrese el nombre de su tienda");
+        }
+        else {
             validar();
         }
 

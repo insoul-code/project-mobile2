@@ -47,7 +47,7 @@
         android:backgroundTint="@color/color_principal"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:onClick="logout"
+        android:onClick="logOut"
         android:paddingLeft="12dp"
         app:icon="@drawable/baseline_logout_24"
         app:layout_constraintBottom_toTopOf="@+id/rvProducts"
@@ -56,7 +56,7 @@
         app:layout_constraintStart_toEndOf="@+id/tituloProductos"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        tools:ignore="OnClick,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/btListProductsPurchased"
@@ -68,7 +68,7 @@
         android:backgroundTint="@color/color_secundario"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:onClick="logout"
+        android:onClick="listProducts"
         android:paddingLeft="12dp"
         app:icon="@drawable/baseline_receipt_long_24"
         app:layout_constraintBottom_toTopOf="@+id/rvProducts"
@@ -76,7 +76,7 @@
         app:layout_constraintStart_toEndOf="@+id/tituloProductos"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        tools:ignore="OnClick,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline15"
