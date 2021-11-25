@@ -24,7 +24,7 @@ import app.proyecto.tiendeo.AdapterUser.ProductAdapterUser;
 import app.proyecto.tiendeo.Entities.Product;
 import app.proyecto.tiendeo.databinding.ActivityHomeUserBinding;
 
-public class ListproductsUser extends AppCompatActivity {
+public class ListproductsUser extends AppCompatActivity{
 
     private ActivityHomeUserBinding mainBinding;
     private FirebaseFirestore db;
@@ -80,7 +80,7 @@ public class ListproductsUser extends AppCompatActivity {
                 });
     }
 
-    public void logOut(View view){
+    public void logOut(){
         FirebaseAuth.getInstance().signOut();
         Context context = getApplicationContext();
         SharedPreferences sharedPreferences = context.getSharedPreferences(
@@ -93,7 +93,7 @@ public class ListproductsUser extends AppCompatActivity {
         editor.putBoolean("session",false);
         editor.commit();
 
-        Intent intent = new Intent(this,Home.class);
+        Intent intent = new Intent(this,Login.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK
         |Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
@@ -104,35 +104,8 @@ public class ListproductsUser extends AppCompatActivity {
         startActivity(intent);
     }
 
-//    public boolean onOptionsItemSelected (MenuItem item) {
-//        int id = item.getItemId();
-//
-//        if (id == R.id.logout) {
-//            Context context = getApplicationContext();
-//            SharedPreferences sharedPref = context.getSharedPreferences(
-//                    getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-//            SharedPreferences.Editor editor = sharedPref.edit();
-//            editor.putString("name","");
-//            editor.putString("tipo","");
-//            editor.putString("tienda","");
-//            editor.putString("correo","");
-//            editor.putBoolean("session",false);
-//            editor.commit();
-//
-//            Intent intent = new Intent(this,Home.class);
-//            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-//            startActivity(intent);
-//        } else if (id == R.id.btnAddProduct) {
-//            Intent intent = new Intent(this,ListBuyUser.class);
-//            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-//            startActivity(intent);
-//            //Toast.makeText(getApplicationContext(), "lista", Toast.LENGTH_SHORT).show();
-//        }else if (id == R.id.btListProductsPurchased) {
-//            Intent intent = new Intent(this,ListproductsUser.class);
-//            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-//            startActivity(intent);
-//            //Toast.makeText(getApplicationContext(), "lista", Toast.LENGTH_SHORT).show();
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
+    public void onClickLogout(View v) {
+        logOut();
+    }
+
 }

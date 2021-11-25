@@ -27,7 +27,7 @@ import app.proyecto.tiendeo.Entities.Shop;
 import app.proyecto.tiendeo.databinding.ActivityHomeUserBinding;
 import app.proyecto.tiendeo.databinding.ActivityListUserPurchasedBinding;
 
-public class ListBuyUser extends AppCompatActivity {
+public class ListBuyUser extends AppCompatActivity{
 
 
     private ActivityListUserPurchasedBinding mainBinding;
@@ -83,8 +83,8 @@ public class ListBuyUser extends AppCompatActivity {
                     }
                 });
     }
-    public void logOut(View view){
-        FirebaseAuth.getInstance().signOut();
+
+    public void onClickLogout(View v) {
         Context context = getApplicationContext();
         SharedPreferences sharedPreferences = context.getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
@@ -96,7 +96,7 @@ public class ListBuyUser extends AppCompatActivity {
         editor.putBoolean("session",false);
         editor.commit();
 
-        Intent intent = new Intent(this,Home.class);
+        Intent intent = new Intent(this,Login.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK
                 |Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
