@@ -30,6 +30,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="4dp"
         android:text="@string/ProductosTitulo"
+        android:textColor="?attr/color"
         android:textSize="28dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/logout"
@@ -44,7 +45,7 @@
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="@color/color_principal"
         android:insetTop="0dp"
         android:insetBottom="0dp"
@@ -62,8 +63,9 @@
         android:id="@+id/btListSold"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="@color/color_principal"
         android:insetTop="0dp"
         android:insetBottom="0dp"
@@ -85,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.66" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/logadd"

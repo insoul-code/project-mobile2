@@ -33,7 +33,7 @@
 
                     <ImageView
                         android:id="@+id/imageView"
-                        android:layout_width="100dp"
+                        android:layout_width="150dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/ic_image_upload_bro" />
@@ -53,6 +53,7 @@
                         android:paddingTop="10dp"
                         android:text="Nombre del producto comprado"
                         android:textSize="16sp"
+                        android:textColor="?attr/color"
                         android:textStyle="bold" />
 
                     <LinearLayout

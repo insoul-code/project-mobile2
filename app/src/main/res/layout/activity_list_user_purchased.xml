@@ -20,6 +20,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="4dp"
         android:text="Lista de compra"
+        android:textColor="?attr/color"
         android:textSize="28dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/logout"
@@ -35,7 +36,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="72dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="@color/color_principal"
         android:insetTop="0dp"
         android:insetBottom="0dp"
@@ -47,6 +48,24 @@
         app:layout_constraintStart_toEndOf="@+id/tituloProductos"
         app:layout_constraintTop_toTopOf="parent"
          />
+
+    <Button
+        android:id="@+id/returnListProducts"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/color_secundario"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="logOut"
+        android:paddingLeft="12dp"
+        app:icon="@drawable/baseline_format_list_bulleted_24"
+        app:layout_constraintBottom_toTopOf="@+id/rvListProductsPurchased"
+        app:layout_constraintEnd_toStartOf="@+id/logout"
+        app:layout_constraintStart_toEndOf="@+id/tituloProductos"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline15"
