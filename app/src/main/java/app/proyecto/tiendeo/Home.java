@@ -73,4 +73,9 @@ public class Home extends AppCompatActivity {
         Intent CreateProduct = new Intent(this, AddProductActivity.class);
         startActivity(CreateProduct);
     }
+
+    public void onClickLogout(View view) {
+        Intent logout = new Intent(this, Login.class);
+        startActivity(logout);
     }
+}
