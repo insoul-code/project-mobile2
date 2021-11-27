@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -24,6 +25,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.StorageReference;
 
 import java.text.DecimalFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Timer;
@@ -55,6 +57,7 @@ public class BuyUserShop extends AppCompatActivity{
         buyProductUserBinding.tvNameProduct.setText(product.getName());
         buyProductUserBinding.tvCateogoriaProductBuy.setText(product.getCategory());
         buyProductUserBinding.tvPriceProduct.setText(String.valueOf(product.getPrice()));
+        buyProductUserBinding.tvTiendaProductBuy.setText(product.getNombre_tienda());
         buyProductUserBinding.tvDescriptionBuy.setText(product.getDescription());
         Glide.with(getApplicationContext())
                 .load(product.getImage())
@@ -67,6 +70,9 @@ public class BuyUserShop extends AppCompatActivity{
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
         String email = sharedPref2.getString("email","");
 
+
+        Date d = new Date();
+        CharSequence fechaActual  = DateFormat.format("d-M-yyyy", d.getTime());
 
         String unidades = jetUnidades.getText().toString();
         String direccion = jetDireccion.getText().toString();
@@ -113,6 +119,7 @@ public class BuyUserShop extends AppCompatActivity{
                             String tienda = product.getNombre_tienda();
                             String image = product.getImage();
                             String user = email;
+                            String fecha = (String) fechaActual;
 
                             userShop.put("name", name);
                             userShop.put("description", description);
@@ -122,6 +129,7 @@ public class BuyUserShop extends AppCompatActivity{
                             userShop.put("nombre_tienda", tienda);
                             userShop.put("user", user);
                             userShop.put("image", image);
+                            userShop.put("fecha",fecha);
                             userShop.put("diretion", direccion);
 
                             db.collection("shop")

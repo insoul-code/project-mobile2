@@ -28,12 +28,12 @@ public class ProductListAdapterUser extends RecyclerView.Adapter<ProductListAdap
 
     private Context context;
     private ProductItemUserPurchasedBinding productItemUserPurchasedBinding;
-    private ArrayList<Shop> productListArrayList;
+    private ArrayList<Shop> shopArrayList;
     private FirebaseFirestore db;
 
-    public ProductListAdapterUser(ListBuyUser context, ArrayList<Shop> productArrayList, FirebaseFirestore db) {
+    public ProductListAdapterUser(ListBuyUser context, ArrayList<Shop> shopArrayList, FirebaseFirestore db) {
         this.context = context;
-        this.productListArrayList = productArrayList;
+        this.shopArrayList = shopArrayList;
         this.db = db;
     }
 
@@ -46,14 +46,15 @@ public class ProductListAdapterUser extends RecyclerView.Adapter<ProductListAdap
 
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
-        Shop shopping = productListArrayList.get(position);
+        Shop shopping = shopArrayList.get(position);
         holder.itemBinding.tvName.setText(shopping.getName());
         holder.itemBinding.tvStock.setText(String.valueOf(shopping.getUnits()));
         DecimalFormat formato = new DecimalFormat("$#,###.###");
         String valorFormateado = formato.format((shopping.getPrice()*shopping.getUnits()));
         holder.itemBinding.tvPrice.setText(valorFormateado);
-        holder.itemBinding.tvDireccionCompra.setText(shopping.getDescription());
+        holder.itemBinding.tvDireccionCompra.setText(shopping.getDirection());
         holder.itemBinding.tvTienda.setText(shopping.getNombre_tienda());
+        holder.itemBinding.tvDatePurchased.setText(shopping.getFecha());
         Glide.with(context)
                 .load(shopping.getImage())
                 .into(productItemUserPurchasedBinding.imageView);
@@ -66,7 +67,7 @@ public class ProductListAdapterUser extends RecyclerView.Adapter<ProductListAdap
                             @Override
                             public void onSuccess(Void unused) {
                                 Toast.makeText(context, "Data delete", Toast.LENGTH_SHORT).show();
-                                productListArrayList.remove(holder.getAdapterPosition());
+                                shopArrayList.remove(holder.getAdapterPosition());
                                 notifyDataSetChanged();
                             }
                         })
@@ -88,7 +89,7 @@ public class ProductListAdapterUser extends RecyclerView.Adapter<ProductListAdap
 
     @Override
     public int getItemCount() {
-        return productListArrayList.size();
+        return shopArrayList.size();
     }
 
     public class ProductViewHolder extends RecyclerView.ViewHolder {

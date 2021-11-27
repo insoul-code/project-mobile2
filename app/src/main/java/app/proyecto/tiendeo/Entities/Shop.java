@@ -13,6 +13,7 @@ public class Shop implements Serializable {
     private String nombre_tienda;
     private String image;
     private String user;
+    private String direction;
     private String fecha;
 
     public String getId() {
@@ -21,6 +22,14 @@ public class Shop implements Serializable {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getDirection() {
+        return direction;
+    }
+
+    public void setDirection(String direction) {
+        this.direction = direction;
     }
 
     public String getName() {
