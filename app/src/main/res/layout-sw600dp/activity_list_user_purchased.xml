@@ -58,7 +58,7 @@
         android:backgroundTint="@color/color_secundario"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:onClick="logOut"
+        android:onClick="irHomeUser"
         android:paddingLeft="12dp"
         app:icon="@drawable/baseline_format_list_bulleted_24"
         app:layout_constraintBottom_toTopOf="@+id/rvListProductsPurchased"

@@ -68,7 +68,7 @@
         android:backgroundTint="@color/color_principal"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:onClick="logout"
+        android:onClick="listSeller"
         android:paddingLeft="12dp"
         app:icon="@drawable/baseline_receipt_long_24"
         app:layout_constraintBottom_toTopOf="@+id/rvProducts"
