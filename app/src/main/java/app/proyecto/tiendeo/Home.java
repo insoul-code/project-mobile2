@@ -1,7 +1,9 @@
 package app.proyecto.tiendeo;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -45,8 +47,15 @@ public class Home extends AppCompatActivity {
     }
 
     public void getProducts(){
+        Context context = getApplicationContext();
+        SharedPreferences sharedPref2 = context.getSharedPreferences(
+                getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        String tienda = sharedPref2.getString("nombre_tienda","");
+        //Toast.makeText(getApplicationContext(), "tienda: "+tienda, Toast.LENGTH_SHORT).show();
 
-        db.collection("products")
+        this.setTitle(tienda);
+
+        db.collection("products").whereEqualTo("nombre_tienda",tienda)
 //                .orderBy("price", Query.Direction.ASCENDING)
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
@@ -73,7 +82,10 @@ public class Home extends AppCompatActivity {
         Intent CreateProduct = new Intent(this, AddProductActivity.class);
         startActivity(CreateProduct);
     }
-
+    public void listSeller(View view){
+        Intent listSeller = new Intent(this, ListProductSeller.class);
+        startActivity(listSeller);
+    }
     public void onClickLogout(View view) {
         Intent logout = new Intent(this, Login.class);
         startActivity(logout);

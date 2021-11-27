@@ -69,7 +69,7 @@
         android:backgroundTint="@color/color_principal"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:onClick="createproduct"
+        android:onClick="listSeller"
         android:paddingLeft="11dp"
         android:textSize="24sp"
         app:icon="@drawable/baseline_receipt_long_24"

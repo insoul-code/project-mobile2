@@ -12,6 +12,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
@@ -52,7 +53,7 @@ public class AddProductActivity extends AppCompatActivity{
 //    private static final int GALLERY_INTENT = 1;
     Button btnImage, btnAddProduct;
     EditText jprice, jstock, jproduct, jdescription, jcategory;
-
+    String tvtienda;
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -79,6 +80,13 @@ public class AddProductActivity extends AppCompatActivity{
         jprice=findViewById(R.id.edtPrice);
 
         Context context = getApplicationContext();
+        SharedPreferences sharedPref2 = context.getSharedPreferences(
+                getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        String tienda = sharedPref2.getString("nombre_tienda","");
+        //Toast.makeText(getApplicationContext(), "tienda: "+tienda, Toast.LENGTH_SHORT).show();
+        tvtienda=(tienda);
+
+        this.setTitle(tienda);
     }
 
     public void SeletImageFromGallery(View view){
@@ -178,6 +186,7 @@ public class AddProductActivity extends AppCompatActivity{
                     String description = jdescription.getText().toString().trim();
                     Integer stock = Integer.valueOf(jstock.getText().toString().trim());
                     String category = jcategory.getText().toString().trim();
+                    String tienda = tvtienda;
                     String uri = downloadURL;
 
                     Map<String, Object> dataProduct = new HashMap<>();
@@ -186,6 +195,7 @@ public class AddProductActivity extends AppCompatActivity{
                     dataProduct.put("price", price);
                     dataProduct.put("stock", stock);
                     dataProduct.put("category",category);
+                    dataProduct.put("nombre_tienda", tienda);
                     dataProduct.put("image", uri);
 
                     db.collection("products")

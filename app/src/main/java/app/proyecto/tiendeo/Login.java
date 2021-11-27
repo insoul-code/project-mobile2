@@ -145,7 +145,7 @@ public class Login extends AppCompatActivity {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 String nombre = (String) document.get("nombre");
                                 String rol = (String) document.get("rol");
-                                String nombre_tienda = (String) document.get("nombre_tienda");
+                                String tienda = (String) document.get("nombre_tienda");
 
                                 Context context = getApplicationContext();
                                 SharedPreferences sharedPref = context.getSharedPreferences(
@@ -153,7 +153,7 @@ public class Login extends AppCompatActivity {
                                 SharedPreferences.Editor editor = sharedPref.edit();
                                 editor.putString("nombre", nombre);
                                 editor.putString("rol", rol);
-                                editor.putString("nombre_tienda", nombre_tienda);
+                                editor.putString("nombre_tienda", tienda);
                                 editor.putString("email", email);
                                 editor.putBoolean("session", true);
                                 editor.commit();
