@@ -76,95 +76,99 @@ public class BuyUserShop extends AppCompatActivity{
 
         String unidades = jetUnidades.getText().toString();
         String direccion = jetDireccion.getText().toString();
+        if (unidades.isEmpty() || direccion.isEmpty()){
+            Toast.makeText(getApplicationContext(), "Todos los campos son requeridos.", Toast.LENGTH_SHORT).show();
 
-        String id = product.getId();
+        }
+        else {
+            String id = product.getId();
 
-        db.collection("products")
-                .document(id).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful()){
-                    DocumentSnapshot documentSnapshot = task.getResult();
-                    if (documentSnapshot.exists()){
-                        Long dataStock = documentSnapshot.getLong("stock");
+            db.collection("products")
+                    .document(id).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                    if (task.isSuccessful()) {
+                        DocumentSnapshot documentSnapshot = task.getResult();
+                        if (documentSnapshot.exists()) {
+                            Long dataStock = documentSnapshot.getLong("stock");
 
-                        int units = Integer.parseInt(unidades);
+                            int units = Integer.valueOf(unidades);
 
-                        if (dataStock >= units && units != 0 && direccion != ""){
-                            int dato = (int) (dataStock - units);
-                            Map<String, Object> dataProduct = new HashMap<>();
-                            dataProduct.put("stock",dato);
+                            if (dataStock >= units && units != 0 && direccion != "") {
+                                int dato = (int) (dataStock - units);
+                                Map<String, Object> dataProduct = new HashMap<>();
+                                dataProduct.put("stock", dato);
 
-                            db.collection("products")
-                                    .document(product.getId())
-                                    .update(dataProduct)
-                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                        @Override
-                                        public void onSuccess(Void unused) {
+                                db.collection("products")
+                                        .document(product.getId())
+                                        .update(dataProduct)
+                                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                            @Override
+                                            public void onSuccess(Void unused) {
 
-                                        }
-                                    })
-                                    .addOnFailureListener(new OnFailureListener() {
-                                        @Override
-                                        public void onFailure(@NonNull Exception e) {
-                                            Toast.makeText(getApplicationContext(), "Error stock", Toast.LENGTH_SHORT).show();
-                                        }
-                                    });
-                            Map<String, Object> userShop = new HashMap<>();
+                                            }
+                                        })
+                                        .addOnFailureListener(new OnFailureListener() {
+                                            @Override
+                                            public void onFailure(@NonNull Exception e) {
+                                                Toast.makeText(getApplicationContext(), "Error stock", Toast.LENGTH_SHORT).show();
+                                            }
+                                        });
+                                Map<String, Object> userShop = new HashMap<>();
 
-                            String name = product.getName();
-                            String description = product.getDescription();
-                            double price = product.getPrice();
-                            String category = product.getCategory();
-                            String tienda = product.getNombre_tienda();
-                            String image = product.getImage();
-                            String user = email;
-                            String fecha = (String) fechaActual;
+                                String name = product.getName();
+                                String description = product.getDescription();
+                                double price = product.getPrice();
+                                String category = product.getCategory();
+                                String tienda = product.getNombre_tienda();
+                                String image = product.getImage();
+                                String user = email;
+                                String fecha = (String) fechaActual;
 
-                            userShop.put("name", name);
-                            userShop.put("description", description);
-                            userShop.put("units", units);
-                            userShop.put("price", price);
-                            userShop.put("category", category);
-                            userShop.put("nombre_tienda", tienda);
-                            userShop.put("user", user);
-                            userShop.put("image", image);
-                            userShop.put("fecha",fecha);
-                            userShop.put("diretion", direccion);
+                                userShop.put("name", name);
+                                userShop.put("description", description);
+                                userShop.put("units", units);
+                                userShop.put("price", price);
+                                userShop.put("category", category);
+                                userShop.put("nombre_tienda", tienda);
+                                userShop.put("user", user);
+                                userShop.put("image", image);
+                                userShop.put("fecha", fecha);
+                                userShop.put("diretion", direccion);
 
-                            db.collection("shop")
-                                    .add(userShop)
-                                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                                        @Override
-                                        public void onSuccess(DocumentReference documentReference) {
-                                            int total = (int) (units*price);
-                                            DecimalFormat format = new DecimalFormat("$#,###.###");
-                                            String valFormat = format.format(total);
+                                db.collection("shop")
+                                        .add(userShop)
+                                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                                            @Override
+                                            public void onSuccess(DocumentReference documentReference) {
+                                                int total = (int) (units * price);
+                                                DecimalFormat format = new DecimalFormat("$#,###.###");
+                                                String valFormat = format.format(total);
 
-                                            TimerTask Star = new TimerTask() {
-                                                @Override
-                                                public void run() {
-                                                    Intent intent = new Intent(getApplicationContext(),ListBuyUser.class);
-                                                    startActivity(intent);
-                                                    finish();
-                                                }
-                                            };
-                                            Timer time = new Timer();
-                                            time.schedule(Star,3500);
-                                        }
-                                    })
-                                    .addOnFailureListener(new OnFailureListener() {
-                                        @Override
-                                        public void onFailure(@NonNull Exception e) {
-                                            Toast.makeText(getApplicationContext(), "Error al procesar la compra", Toast.LENGTH_SHORT).show();
-                                        }
-                                    });
-                        }else if (units == 0 || direccion == ""){
-                            Toast.makeText(getApplicationContext(), "Por favor verifique su dirreccion de entrega y cantidad.", Toast.LENGTH_SHORT).show();
-                        }
-                        else {
-                            Toast.makeText(getApplicationContext(), "Lo sentimos el articulo no tiene existencias " + dataStock + " unidades", Toast.LENGTH_SHORT).show();
-                        }
+                                                TimerTask Star = new TimerTask() {
+                                                    @Override
+                                                    public void run() {
+                                                        Intent intent = new Intent(getApplicationContext(), ListBuyUser.class);
+                                                        startActivity(intent);
+                                                        finish();
+                                                    }
+                                                };
+                                                Timer time = new Timer();
+                                                time.schedule(Star, 3500);
+                                            }
+                                        })
+                                        .addOnFailureListener(new OnFailureListener() {
+                                            @Override
+                                            public void onFailure(@NonNull Exception e) {
+                                                Toast.makeText(getApplicationContext(), "Error al procesar la compra", Toast.LENGTH_SHORT).show();
+                                            }
+                                        });
+                            } else if (units == 0 || direccion.isEmpty()) {
+                                Toast.makeText(getApplicationContext(), "Por favor verifique su dirreccion de entrega y cantidad.", Toast.LENGTH_SHORT).show();
+
+                            } else {
+                                Toast.makeText(getApplicationContext(), "Lo sentimos el articulo no tiene existencias " + dataStock + " unidades", Toast.LENGTH_SHORT).show();
+                            }
 //                        if (progressDialog.isShowing()){
 //                            progressDialog.dismiss();
 //                            Intent intent = new Intent(getApplicationContext(),BuyUserShop.class);
@@ -174,9 +178,10 @@ public class BuyUserShop extends AppCompatActivity{
 //                        else {
 //
 //                        }
+                        }
                     }
                 }
-            }
-        });
+            });
+        }
     }
 }
